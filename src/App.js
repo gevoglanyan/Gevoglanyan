@@ -9,7 +9,7 @@ function App() {
         <header className="App-Header">
           <img src="Harold.jpg" alt="Harold" />
           <br />
-          <p>Gevoglanyan</p>
+          <p>Harutyun</p>
           <br />
           <p>Coming Soon!</p>
         </header>
