@@ -18,7 +18,7 @@
 }
 
 /* Header Styling */
-.App-Header {
+.Header {
   background: linear-gradient(135deg, #232323, #1A1A1A);
   border-radius: 15px;
   padding: 40px;
@@ -33,7 +33,7 @@
 }
 
 /* Image Styling */
-.App-Header img {
+.Header img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -43,7 +43,7 @@
 }
 
 /* Text Styling */
-.App-Header p {
+.Header p {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 10px;
@@ -51,7 +51,7 @@
   color: #FFFFFF;
 }
 
-.App-Header p:last-of-type {
+.Header p:last-of-type {
   font-size: 1.4rem;
   font-weight: 400;
   color: white;
@@ -60,20 +60,32 @@
 }
 
 /* Hyperlink Styling */
-.App-Header a {
-  color: white; 
+.Header a {
+  color: red; 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
-.App-Header a:hover {
-  color: lightgrey; 
+.Header a:hover {
+  color: blue; 
 }
 
-.footer {
+.Footer {
   text-align: center;
   color: white;
   padding: 100px;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    justify-content: center; 
+  }
+}
+
+@media (min-width: 769px) {
+  .social-icons {
+    justify-content: flex-start; 
+  }
 }
