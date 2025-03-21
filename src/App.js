@@ -8,7 +8,6 @@ function App() {
       <div className="App">
         <header className="Header">
           <img src="Harold.jpg" alt="Harold" />
-          <br />
           <p>
             Welcome 
 
@@ -53,6 +52,12 @@ function App() {
           <a href="https://www.tiktok.com/@hgevoglanyan" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 448 512" fill="white">
               <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.twitch.tv/haroldfps" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 512 512" fill="white">
+              <path d="M391.2 103.5H352.5v109.7h38.6zM285 103H246.4V212.8H285zM120.8 0 24.3 91.4V420.6H140.1V512l96.5-91.4h77.3L487.7 256V0zM449.1 237.8l-77.2 73.1H294.6l-67.6 64v-64H140.1V36.6H449.1z"/>
             </svg>
           </a>
 
