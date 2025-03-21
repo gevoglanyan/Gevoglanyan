@@ -18,7 +18,7 @@ function App() {
           <p className="WelcomeText">Welcome</p>
           <p className="Text">Explore Both Sides</p>
         </div>
-        
+
         <br />
 
         <div className="container">
