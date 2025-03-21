@@ -6,7 +6,11 @@ function App() {
   const [activeSection, setActiveSection] = useState(null);
 
   const handleToggle = (section) => {
-    setActiveSection(activeSection === section ? null : section);
+    if (activeSection === section) {
+      setActiveSection(null);
+    } else {
+      setActiveSection(section); 
+    }
   };
 
   return (
