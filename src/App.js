@@ -100,6 +100,17 @@ function App() {
           </div>
         </div>
 
+        <div className="contact-section">
+        <p className="WelcomeText">Keep in Touch</p>
+        <br />
+        <br />
+        <form action="https://formsubmit.co/gevoglanyan.harutyun@gmail.com" method="POST">
+          <input type="email" name="email" required placeholder="Your Email" />
+          <textarea name="message" required placeholder="Your Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        </div>
+
         <div className="Footer">
           <p>&copy; 2025 Gevoglanyan. All Rights Reserved.</p>
         </div>
