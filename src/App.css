@@ -5,13 +5,13 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
-  background-color: #1A1A1A;
+  background-color: black;
 }
 
 /* App Container */
 .App {
   text-align: center;
-  background-color: #1A1A1A;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,12 +44,12 @@
   font-weight: 600;
   color: white;
   text-align: center;
-  background-color: #1A1A1A;
+  background-color: black;
 }
 
 .Text {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -69,7 +69,8 @@
 /* Side Panels */
 .side {
   flex: 1;
-  background: linear-gradient(135deg, #232323, #1A1A1A);
+  background-color: black;
+  border: 2px solid white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -109,7 +110,8 @@
 /* Buttons */
 .toggle-btn {
   padding: 15px 25px;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   border-radius: 10px;
@@ -176,6 +178,19 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Styled Link */
+.Text a {
+  color: lightgreen;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  background: transparent !important; 
+}
+
+.Text a:hover {
+  color: white;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -207,8 +222,15 @@
   }
 
   .toggle-btn {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    padding: 14px 30px;
+    width: 100%; 
+    max-width: 200px; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .social-icons a img {

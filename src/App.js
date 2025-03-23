@@ -19,7 +19,7 @@ function App() {
         <div className="ImageWrapper">
           <img src="Harold.jpg" alt="Harold" className="Image" />
           <br />
-          <p className="WelcomeText">Welcome</p>
+          <p className="WelcomeText">Greetings</p>
           <p className="Text">Explore Both Sides</p>
         </div>
 
@@ -28,11 +28,12 @@ function App() {
         <div className="container">
           <div className={`side personal-side ${activeSection === 'personal' ? 'expanded' : ''}`}>
             <button className="toggle-btn" onClick={() => handleToggle('personal')}>
-              {activeSection === 'personal' ? 'Harutyun' : 'Harutyun'}
+              {activeSection === 'personal' ? 'Harut' : 'Harut'}
             </button>
 
               {activeSection === 'personal' && (
                 <div className="content fade-in">
+                  <p className="Text">Personal</p>
                   <br />
                   <div className="social-icons">
                     <a href="https://github.com/gevoglanyan" target="_blank" rel="noopener noreferrer">
@@ -65,6 +66,10 @@ function App() {
                       </svg>
                     </a>
                   </div>
+                  <br />
+                  <br />
+                  <p className="Text">Project</p>
+                  <p className="Text"><a href="https://www.iaquaaquatics.com">iAqua Aquatics</a></p>
                 </div>
               )}
           </div>
@@ -75,6 +80,7 @@ function App() {
             </button>
               {activeSection === 'gaming' && (
                 <div className="content fade-in">
+                  <p className="Text">Gaming</p>
                   <br />
                   <div className="social-icons">
                     <a href="https://www.twitch.tv/haroldfps" target="_blank" rel="noopener noreferrer">
