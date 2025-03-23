@@ -202,7 +202,7 @@
   }
 }
 
-.contact-section {
+.Contact {
   margin-top: 50px;
   padding: 20px;
   text-align: center;
@@ -210,7 +210,7 @@
   width: 100%;
 }
 
-.contact-section form {
+.Contact form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -222,8 +222,8 @@
   text-align: center;
 }
 
-.contact-section input,
-.contact-section textarea {
+.Contact input,
+.Contact textarea {
   padding: 18px 16px;
   border-radius: 15px;
   border: 2px solid white;
@@ -234,25 +234,25 @@
   
 }
 
-.contact-section textarea {
+.Contact textarea {
   min-height: 180px;
   resize: vertical;
 }
 
-.contact-section input::placeholder,
-.contact-section textarea::placeholder {
+.Contact input::placeholder,
+.Contact textarea::placeholder {
   color: white;
   opacity: 0.7;
   font-size: 1rem;
 }
 
-.contact-section input:focus,
-.contact-section textarea:focus {
+.Contact input:focus,
+.Contact textarea:focus {
   outline: none; 
   background-color: black;
 }
 
-.contact-section button {
+.Contact button {
   margin-top: 15px;
   padding: 16px;
   width: 150px;
@@ -266,7 +266,7 @@
   cursor: pointer;
 }
 
-.contact-section button:hover {
+.Contact button:hover {
   background-color: lightgreen;
 }
 
@@ -280,27 +280,30 @@
 
   .side {
     width: 90%;
+    min-height: 100px; 
     height: auto;
-    margin: 0 auto;
-    padding: 15px;
+    flex: none;         
+    margin: 20px auto;
+    padding: 20px;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .side.expanded {
-    flex: 1;
-    height: auto;
+    min-height: 400px;
   }
 
   .toggle-btn {
     font-size: 1.2rem;
     padding: 14px 30px;
-    width: 100%; 
-    max-width: 200px; 
+    width: 100%;
+    max-width: 200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
   }
 
   .social-icons a img {
@@ -308,18 +311,18 @@
     height: 28px;
   }
 
-  .contact-section form {
+  .Contact form {
     width: 100%;
     padding: 0 20px;
   }
 
-  .contact-section input,
-  .contact-section textarea {
+  .Contact input,
+  .Contact textarea {
     width: 100%;
     font-size: 1rem;
   }
 
-  .contact-section button {
+  .Contact button {
     width: 100%;
     max-width: 200px;
   }

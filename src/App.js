@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleToggle = (section) => {
     if (activeSection === section) {
@@ -100,15 +102,37 @@ function App() {
           </div>
         </div>
 
-        <div className="contact-section">
-        <p className="WelcomeText">Keep in Touch</p>
-        <br />
-        <br />
-        <form action="https://formsubmit.co/gevoglanyan.harutyun@gmail.com" method="POST">
-          <input type="email" name="email" required placeholder="Your Email" />
-          <textarea name="message" required placeholder="Your Message"></textarea>
-          <button type="submit">Send</button>
-        </form>
+        <div className="Contact">
+          <p className="WelcomeText">Keep in Touch</p>
+          <br /><br /><br />
+          <form
+            action="https://formsubmit.co/gevoglanyan.harutyun@gmail.com"
+            method="POST"
+            onSubmit={() => {
+              setTimeout(() => {
+                setEmail("");
+                setMessage("");
+              }, 100);
+            }}
+          >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <textarea
+              name="message"
+              required
+              placeholder="Your Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+
         </div>
 
         <div className="Footer">
