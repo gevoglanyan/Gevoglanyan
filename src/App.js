@@ -136,6 +136,7 @@ function App() {
               }, 100);
             }}
           >
+            <input type="hidden" name="_captcha" value="false" />
             <input
               type="email"
               name="email"
@@ -153,7 +154,6 @@ function App() {
             ></textarea>
             <button type="submit">Send</button>
           </form>
-
         </div>
 
         <div className="Footer">

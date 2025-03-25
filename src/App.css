@@ -31,8 +31,8 @@
 }
 
 .Image {
-  width: 175px;
-  height: 175px;
+  width: 225px;
+  height: 225px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
