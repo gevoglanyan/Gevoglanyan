@@ -3,9 +3,12 @@ import './App.css';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [activeSection, setActiveSection] = useState(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  
+  const [activeSection, setActiveSection] = useState(() => {
+    return window.innerWidth <= 768 ? "personal" : null;
+  });
 
   const handleToggle = (section) => {
     if (activeSection === section) {
@@ -35,7 +38,9 @@ function App() {
 
               {activeSection === 'personal' && (
                 <div className="content fade-in">
-                  <p className="Text">Personal</p>
+                  <p className="Text">Full Stack Developer</p>
+                  <br /><br />
+                  <p className="Text">Personal Links</p>
                   <br />
                   <div className="social-icons">
                     <a href="https://github.com/gevoglanyan" target="_blank" rel="noopener noreferrer">
@@ -47,6 +52,12 @@ function App() {
                     <a href="https://www.instagram.com/hgevoglanyan/" target="_blank" rel="noopener noreferrer">
                       <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 448 512" fill="white">
                          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                      </svg>
+                    </a>
+
+                    <a href="https://letterboxd.com/harutyun/" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 448 512" fill="white">
+                        <path d="M384 32c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H384zM105.1 187C66.4 187 35 218.3 35 257s31.4 70 70.1 70c24.8 0 46.5-12.8 59-32.2l.5-.7-.4-.6c-6.5-10.6-10.2-23.1-10.2-36.5c0-13.6 3.9-26.3 10.6-37.1c-12.4-19.8-34.4-32.9-59.5-32.9zM224 187c-24.8 0-46.5 12.8-59 32.2l-.5 .7 .4 .6c6.5 10.6 10.2 23.1 10.2 36.5c0 13.6-3.9 26.3-10.6 37.1C176.9 313.8 198.9 327 224 327c24.8 0 46.5-12.8 59-32.2l.5-.7-.4-.6c-6.5-10.6-10.2-23.1-10.2-36.5c0-13.6 3.9-26.3 10.6-37.1C271.1 200.2 249.1 187 224 187zm118.9 0c-24.8 0-46.5 12.8-59 32.2l-.5 .7 .4 .6c6.5 10.6 10.2 23.1 10.2 36.5c0 13.6-3.9 26.3-10.6 37.1c12.4 19.8 34.4 32.9 59.5 32.9c38.7 0 70.1-31.3 70.1-70s-31.4-70-70.1-70z"/>
                       </svg>
                     </a>
 
@@ -68,8 +79,7 @@ function App() {
                       </svg>
                     </a>
                   </div>
-                  <br />
-                  <br />
+                  <br /><br />
                   <p className="Text">Project</p>
                   <p className="Text"><a href="https://www.iaquaaquatics.com">iAqua Aquatics</a></p>
                 </div>
@@ -82,9 +92,17 @@ function App() {
             </button>
               {activeSection === 'gaming' && (
                 <div className="content fade-in">
-                  <p className="Text">Gaming</p>
+                  <p className="Text">Part Time Gamer</p>
+                  <br /><br />
+                  <p className="Text">Gaming Links</p>
                   <br />
                   <div className="social-icons">
+                    <a href="https://steamcommunity.com/id/haroldfps/" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 496 512" fill="white">
+                        <path d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.8 52.8 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3 .1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/>
+                      </svg>
+                    </a>
+
                     <a href="https://www.twitch.tv/haroldfps" target="_blank" rel="noopener noreferrer">
                       <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 512 512" fill="white">
                         <path d="M391.2 103.5H352.5v109.7h38.6zM285 103H246.4V212.8H285zM120.8 0 24.3 91.4V420.6H140.1V512l96.5-91.4h77.3L487.7 256V0zM449.1 237.8l-77.2 73.1H294.6l-67.6 64v-64H140.1V36.6H449.1z"/>
@@ -97,12 +115,15 @@ function App() {
                       </svg>
                     </a>
                   </div>
+                  <br /><br />
+                  <p className="Text">Mainly Play</p>
+                  <p className="Text"><a href="https://www.bungie.net/7/en/Destiny">Destiny 2</a></p>
                 </div>
               )}
           </div>
         </div>
 
-        <div className="Contact">
+        <div className="contact">
           <p className="WelcomeText">Keep in Touch</p>
           <br /><br /><br />
           <form
