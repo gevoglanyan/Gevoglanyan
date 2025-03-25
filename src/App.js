@@ -3,6 +3,7 @@ import './App.css';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   
@@ -18,6 +19,14 @@ function App() {
     }
   };
 
+  const handleSubmit = () => {
+    setTimeout(() => {
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 100);
+  };
+
   return (
     <>
       <div className="App">
@@ -27,19 +36,16 @@ function App() {
           <p className="WelcomeText">Greetings</p>
           <p className="Text">Explore Both Sides</p>
         </div>
-
         <br />
-
         <div className="container">
           <div className={`side personal-side ${activeSection === 'personal' ? 'expanded' : ''}`}>
             <button className="toggle-btn" onClick={() => handleToggle('personal')}>
               {activeSection === 'personal' ? 'Harut' : 'Harut'}
             </button>
-
               {activeSection === 'personal' && (
                 <div className="content fade-in">
                   <p className="Text">Full Stack Developer</p>
-                  <br /><br />
+                  <br /> <br />
                   <p className="Text">Personal Links</p>
                   <br />
                   <div className="social-icons">
@@ -79,7 +85,7 @@ function App() {
                       </svg>
                     </a>
                   </div>
-                  <br /><br />
+                  <br /> <br />
                   <p className="Text">Project</p>
                   <p className="Text"><a href="https://www.iaquaaquatics.com">iAqua Aquatics</a></p>
                 </div>
@@ -127,31 +133,39 @@ function App() {
           <p className="WelcomeText">Keep in Touch</p>
           <br /><br /><br />
           <form
-            action="https://formsubmit.co/gevoglanyan.harutyun@gmail.com"
+            action="https://submit-form.com/iZ96IAVEZ"
             method="POST"
-            onSubmit={() => {
-              setTimeout(() => {
-                setEmail("");
-                setMessage("");
-              }, 100);
-            }}
+            onSubmit={handleSubmit}
           >
-            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
             <input
               type="email"
+              id="email"
               name="email"
-              required
               placeholder="Your Email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+
             <textarea
+              id="message"
               name="message"
-              required
               placeholder="Your Message"
+              required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+
             <button type="submit">Send</button>
           </form>
         </div>
