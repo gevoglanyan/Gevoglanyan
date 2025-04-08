@@ -86,7 +86,7 @@ function App() {
                     </a>
                   </div>
                   <br /> <br />
-                  <p className="Text">Project</p>
+                  <p className="Text">Other Website</p>
                   <p className="Text"><a href="https://www.iaquaaquatics.com">iAqua Aquatics</a></p>
                 </div>
               )}
