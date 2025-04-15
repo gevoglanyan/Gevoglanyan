@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -6,6 +6,55 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const [showSplash, setShowSplash] = useState(true);
+  const [typedText, setTypedText] = useState('');
+  const fullText = 'Gevoglanyan';
+
+  useEffect(() => {
+    if (!showSplash) return;
+  
+    setTypedText('');
+    let i = 0;
+  
+    const interval = setInterval(() => {
+      if (i < fullText.length) {
+        const nextChar = fullText.charAt(i);
+        setTypedText(prev => prev + nextChar);
+        i++; 
+      } else {
+        clearInterval(interval);
+      }
+    }, 150);
+  
+    return () => clearInterval(interval);
+  }, [showSplash]);
+  
+  
+  const handleEnterClick = (e) => {
+    const button = e.currentTarget;
+  
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+  
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+  
+    button.appendChild(ripple);
+  
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  
+    document.querySelector('.splash-screen')?.classList.add('fade-zoom-out');
+  
+    setTimeout(() => {
+      setShowSplash(false);
+    }, 500); 
+  };
   
   const [activeSection, setActiveSection] = useState(() => {
     return window.innerWidth <= 768 ? "personal" : null;
@@ -29,6 +78,14 @@ function App() {
 
   return (
     <>
+     {showSplash ? (
+      <div className="splash-screen">
+        <div className="name-animation">{typedText}</div>
+        <button className="enter-button" onClick={handleEnterClick}>
+          Enter
+        </button>
+      </div>
+    ) : (
       <div className="App">
         <div className="ImageWrapper">
           <img src="Harold.jpg" alt="Harold" className="Image" />
@@ -174,7 +231,7 @@ function App() {
           <p>&copy; 2025 Gevoglanyan. All Rights Reserved.</p>
         </div>
       </div>
-
+    )}
       <Analytics />
     </>
   );
