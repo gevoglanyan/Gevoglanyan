@@ -39,9 +39,9 @@ function App() {
         clearInterval(interval);
         setTerminalLines(prev => [...prev, '<span class="prompt">gevoglanyan@archlinux:~$</span> <span class="command">cleak</span>', '<span class="error">bash: cleak: command not found</span>']);
         setTypedCommand('');
-        setTimeout(() => setShowPhase('clear'), 500);
+        setTimeout(() => setShowPhase('clear'), 150);
       }
-    }, 220);
+    }, 150);
     return () => clearInterval(interval);
   }, [showPhase]);
 
@@ -59,7 +59,7 @@ function App() {
           setTypedCommand('');   
           setTimeout(() => {
             setShowPhase('boot');
-          }, 300);
+          }, 150);
         }, 150);
       }
     }, 150);
