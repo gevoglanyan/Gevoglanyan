@@ -49,7 +49,7 @@ const Trail = () => {
   
       points.current.forEach((point) => {
         ctx.beginPath();
-        ctx.arc(point.x, point.y, 8, 0, Math.PI * 2, false);
+        ctx.arc(point.x, point.y, 10, 0, Math.PI * 2, false);
         ctx.fillStyle = `rgba(255, 255, 255, ${point.alpha})`;
         ctx.shadowColor = 'rgb(255, 255, 255)';
         ctx.shadowBlur = 10;

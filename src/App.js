@@ -121,7 +121,7 @@ function App() {
           <div className="fixed top-4 right-4 z-50 md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(prev => !prev)}
-              className="relative flex flex-col justify-between w-8 h-6 p-1 text-white-400 md:hidden z-50"
+              className="relative flex flex-col justify-between w-8 h-6 p-1 text-white md:hidden z-50"
               aria-controls="mobile-navigation"
               aria-expanded={isMobileMenuOpen}
             >

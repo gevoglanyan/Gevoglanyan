@@ -3,6 +3,18 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  safelist: [
+    "rotate-45",
+    "-rotate-45",
+    "translate-y-2",
+    "-translate-y-2",
+    "opacity-0",
+    "block",
+    "hidden",
+    "h-0.5",
+    "bg-current",
+    "transition-all",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -20,5 +32,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};
