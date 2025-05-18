@@ -33,7 +33,10 @@ const Landing = () => {
   return (
     <section id="landing" className="min-h-[calc(100vh-60px)] flex flex-col justify-center items-center px-8 pt-2 text-center relative">
       <div className="max-w-4xl z-10">
-        <h1 className="text-6xl md:text-7xl font-extrabold text-[white] drop-shadow-md mb-4">Harutyun Gevoglanyan</h1>
+        <h1 className="mt-24 md:mt-0 text-6xl md:text-7xl font-extrabold text-[white] drop-shadow-md mb-4">
+          Harutyun Gevoglanyan
+        </h1>
+
         <h2 className="text-2xl md:text-3xl font-semibold text-[cyan] tracking-widest mb-6">
           {displayedText}<span className="animate-blink">|</span>
         </h2>

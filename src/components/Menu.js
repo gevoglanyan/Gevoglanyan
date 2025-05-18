@@ -45,7 +45,8 @@ const MobileMenu = ({ onClose }) => {
             <hr className="absolute left-[-10%] h-2 w-[200vw] bg-white-400 blur-[20px]" />
           </div>
           <div className="text-4xl font-bold text-center text-white mb-6">
-            < br /> Harutyun Gevoglanyan
+            < br /> Harutyun
+            < br /> Gevoglanyan
           </div>
           <section className="flex flex-col gap-4 items-center mt-8 text-sm text-white-400">
             <div> 
@@ -54,7 +55,7 @@ const MobileMenu = ({ onClose }) => {
             <div>
               by Harutyun Gevoglanyan 
             </div>
-            <a href="mailto:you@example.com" className="text-white-400 underline">gevoglanyan.harutyun@gmail.com</a>
+            <a href="mailto:gevoglanyan.harutyun@gmail.com" className="text-white-400 underline">gevoglanyan.harutyun@gmail.com</a>
           </section>
         </footer>
       </div>
