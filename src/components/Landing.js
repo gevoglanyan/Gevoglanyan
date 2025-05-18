@@ -57,7 +57,7 @@ const Landing = () => {
           Revamp Coming Soon
         </h2>
 
-        <br /> <br />
+        <br />
 
         <div className="social-icons flex justify-center space-x-8 mt-8">
           <a
