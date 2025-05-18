@@ -137,7 +137,7 @@ function App() {
           <main className="pt-0">
             <Landing />
 
-            {/*}
+            {/*
             <About />
             <Skills />
             <Projects />
@@ -146,7 +146,7 @@ function App() {
             */}
 
           </main>
-          <Footer />
+          {/*<Footer />*/}
         </div>
       )}
       <Analytics />
