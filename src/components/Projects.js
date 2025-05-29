@@ -91,11 +91,11 @@ const Projects = () => {
 
         <div className="flex justify-center">
           <ul className="list-none text-white/90 text-base leading-relaxed mb-4 px-4 text-center">
-            <li>Guest Login & Resume Functionality using Cookies</li>
-            <li>Admin Dashboard with Game-Specific Filters & Analytics</li>
-            <li>User Dashboard with Personal Information & Game History</li>
-            <li>Dynamic Questionnaire Forms tied to Each Game</li>
-            <li>CSV Export and JSON-Based Game Data Storage</li>
+            <li>Guest Login & Resume Functionality</li>
+            <li>Admin Dashboard with Game-Specific Filters</li>
+            <li>User Dashboard with Game History</li>
+            <li>Dynamic Questionnaire Forms</li>
+            <li>CSV Export and JSON Game Data Storage</li>
           </ul>
         </div>
       </div>
