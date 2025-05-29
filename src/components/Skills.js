@@ -38,6 +38,8 @@ const Skills = () => {
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">MongoDB</li>
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Java</li>
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Python</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">C</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">C++</li>
             </ul>
 
           </div>
