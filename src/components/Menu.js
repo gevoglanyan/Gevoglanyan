@@ -55,6 +55,9 @@ const MobileMenu = ({ onClose }) => {
             <div>
               by Harutyun Gevoglanyan 
             </div>
+
+            <br /> 
+            
             <a href="mailto:gevoglanyan.harutyun@gmail.com" className="text-white-400 underline">gevoglanyan.harutyun@gmail.com</a>
           </section>
         </footer>

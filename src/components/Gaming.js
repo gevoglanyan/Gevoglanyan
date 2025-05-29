@@ -2,22 +2,20 @@ import React from 'react';
 
 const Gaming = () => {
   return (
-    <section id="gaming" className="min-h-screen px-6 lg:px-24 py-20 text-white flex flex-col justify-center">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div>
-          <h2 className="text-5xl font-bold text-[cyan] mb-6 flex items-center gap-2">
-            GAMING
-          </h2>
-        </div>
+    <section
+      id="gaming"
+      className="min-h-[calc(100vh-60px)] flex flex-col justify-center items-center px-6 md:px-12 lg:px-24 py-16 text-center bg-transparent relative"
+    >
+      <div className="max-w-5xl w-full z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-6">
+          GAMING
+        </h2>
 
-        {/* Placeholder */}
+        <br />
 
-        <div className="text-white-300 text-base leading-relaxed">
-          <p className="mb-6"></p>
-          <p className="mb-6"></p>
-          <p></p>
-        </div>
-
+        <h3 className="text-2xl font-semibold text-white mb-6">
+          Slowly Adding!
+        </h3>
       </div>
     </section>
   );

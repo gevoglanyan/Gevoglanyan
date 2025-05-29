@@ -3,11 +3,11 @@ import { Analytics } from "@vercel/analytics/react";
 
 import Header from './components/Header';
 import Landing from './components/Landing';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Gaming from './components/Gaming';
-import Contact from './components/Contact';
+// import About from './components/About';
+// import Skills from './components/Skills';
+// import Projects from './components/Projects';
+// import Gaming from './components/Gaming';
+// import Contact from './components/Contact';
 import Dots from './components/Dots';
 import Menu from './components/Menu';
 import Trail from './components/Trail';
@@ -146,7 +146,7 @@ function App() {
             */}
 
           </main>
-          {/*<Footer />*/}
+          <Footer />
         </div>
       )}
       <Analytics />

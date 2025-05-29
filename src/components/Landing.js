@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const titles = ["SOFTWARE ENGINEER", "FULL STACK DEVELOPER", "WEB DEVELOPER", "GAMER"];
+const titles = ["SOFTWARE ENGINEER", "FULL STACK DEVELOPER", "WEB DEVELOPER", "GAMER", "FRONT-END DEVELOPER", "BACK-END DEVELOPER"];
 
 const Landing = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -52,10 +52,32 @@ const Landing = () => {
           <a href="#about" className="bg-[cyan] text-black font-semibold px-6 py-2 rounded hover:bg-[cyan] transition">Learn More</a>
         </div>
 
-        <h2 className="text-2xl md:text-3xl font-semibold text-[white] tracking-widest mb-6">
-          <br /> <br />
+        <h2 className="text-2xl md:text-3xl font-semibold text-[white] tracking-widest mt-16 mb-6">
           Revamp Coming Soon
         </h2>
+
+        <h2 className="text-2xl md:text-3xl font-semibold text-[white] tracking-widest mt-16 mb-6">
+          Visit 
+        </h2>
+
+        <div className="text-2xl md:text-2xl font-semibold text-[white] tracking-widest text-center space-y-6 mt-12 mb-6">
+          
+          <div className="space-y-4">
+            <div className="text-cyan-400">
+              <a href="https://gmgtransportation.com" target="_blank" rel="noopener noreferrer">
+                GMG Transportation
+              </a>
+            </div>
+
+            <p>&</p>
+
+            <div className="text-cyan-400">
+              <a href="https://iaquaaquatics.com" target="_blank" rel="noopener noreferrer">
+                iAqua Aquatics
+              </a>
+            </div>
+          </div>
+        </div>
 
         <br />
 
