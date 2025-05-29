@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const sections = [
   { id: 'about', label: 'ABOUT' },
@@ -9,6 +9,15 @@ const sections = [
 ];
 
 const MobileMenu = ({ onClose }) => {
+
+  useEffect(() => {
+    document.body.classList.add('overflow-hidden');
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []);
+
   const handleLinkClick = (id) => {
     onClose();
     requestAnimationFrame(() => {
