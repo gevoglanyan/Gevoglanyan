@@ -146,6 +146,9 @@ function App() {
             */}
 
           </main>
+
+          <br /> <br /> <br />
+
           <Footer />
         </div>
       )}

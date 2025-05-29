@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react'; 
+// import React, { useState } from 'react';
+// import { ChevronLeft, ChevronRight } from 'lucide-react'; 
 
+/*
 const imageData = [
   { src: "/images/Homepage.png", label: "Homepage" },
   { src: "/images/Games.png", label: "Games" },
@@ -9,13 +10,14 @@ const imageData = [
   { src: "/images/Admin Dashboard.png", label: "Admin Dashboard" },
   { src: "/images/User Dashboard.png", label: "User Dashboard" },
 ];
+*/
 
 const Projects = () => {
-  const [index, setIndex] = useState(0);
-  const total = imageData.length;
+  // const [index, setIndex] = useState(0);
+  // const total = imageData.length;
   
-  const next = () => setIndex((index + 1) % total);
-  const prev = () => setIndex((index - 1 + total) % total);
+  // const next = () => setIndex((index + 1) % total);
+  // const prev = () => setIndex((index - 1 + total) % total);
 
   return (
     <section
