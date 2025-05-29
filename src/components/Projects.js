@@ -70,7 +70,7 @@ const Projects = () => {
 
         <br />
 
-        <p className="text-white font-semibold text-lg mt-8 mb-2">Features:</p>
+        <p className="text-white font-semibold text-lg mt-8 mb-2">Games:</p>
 
         <div className="flex justify-center">
           <div className="text-white/80 text-lg leading-relaxed max-w-3xl mx-auto space-y-12 mt-4">
@@ -87,7 +87,7 @@ const Projects = () => {
 
         <br /> <br />
 
-        <p className="text-white font-semibold text-lg mt-8 mb-2">Includes:</p>
+        <p className="text-white font-semibold text-lg mt-8 mb-2">Features:</p>
 
         <div className="flex justify-center">
           <ul className="list-none text-white/90 text-base leading-relaxed mb-4 px-4 text-center">
