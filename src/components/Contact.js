@@ -15,7 +15,7 @@ const Contact = () => {
         </h2>
 
         {state.succeeded ? (
-          <p className="text-green-400 text-xl font-medium">Thanks for reaching out! I'll get back to you soon.</p>
+          <p className="text-white-400 text-xl font-medium"> <br /> <br /> <br /> <br /> <br /> Thanks for reaching out! I'll get back to you soon.</p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6 text-left">
             <div>
