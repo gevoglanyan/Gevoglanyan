@@ -11,12 +11,12 @@ const sections = [
 const MobileMenu = ({ onClose }) => {
   const handleLinkClick = (id) => {
     onClose();
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 200); 
+    });
   };
 
   return (
