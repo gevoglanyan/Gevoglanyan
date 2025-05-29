@@ -51,23 +51,41 @@ const Projects = () => {
           <p>
             <span className="font-semibold text-white">Techmetrica</span> is a psychology-based web platform that explores decision-making and self-reflection through interactive games.
           </p>
+
+          <br />
+          
           <p>
-            <span className="font-semibold text-white">
-              Built with React, Next.js, Node.js, Express.js, and MySQL
-            </span>
+            <p className="text-white font-semibold text-lg mt-8 mb-2">Built with:</p>
+            <div className="text-white/80 text-lg leading-relaxed max-w-3xl mx-auto space-y-12 mt-8">
+              <ul className="flex flex-wrap justify-center gap-4 text-base">
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Next.js</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Node.js</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Express.js</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">MySQL</li>
+              </ul>
+            </div>
           </p>
         </div>
+
+        <br />
 
         <p className="text-white font-semibold text-lg mt-8 mb-2">Features:</p>
 
         <div className="flex justify-center">
-          <ul className="list-none text-white/90 text-base leading-relaxed mb-4 px-4 text-center">
-            <li>Try Buy Goodbye</li>
-            <li>Game of Drones</li>
-            <li>Sensi Bot</li>
-            <li>Folk Theories of Phones</li>
-          </ul>
+          <div className="text-white/80 text-lg leading-relaxed max-w-3xl mx-auto space-y-12 mt-4">
+            <div>
+              <ul className="flex flex-col items-center gap-4 text-base">
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Try Buy Goodbye</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Game of Drones</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Sensi Bot</li>
+                <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Folk Theories of Phones</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <br /> <br />
 
         <p className="text-white font-semibold text-lg mt-8 mb-2">Includes:</p>
 
