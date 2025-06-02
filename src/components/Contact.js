@@ -29,7 +29,7 @@ const Contact = () => {
                 name="name"
                 required
                 placeholder="Harutyun Gevoglanyan"
-                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-cyan-700 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
               <ValidationError prefix="Name" field="name" errors={state.errors} />
             </div>
@@ -44,7 +44,7 @@ const Contact = () => {
                 name="email"
                 required
                 placeholder="gevoglanyan.harutyun@gmail.com"
-                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-cyan-700 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
               <ValidationError prefix="Email" field="email" errors={state.errors} />
             </div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 required
                 rows="5"
                 placeholder="Write your message like it's your best commit message."
-                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-cyan-700 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
