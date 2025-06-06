@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Analytics } from "@vercel/analytics/react";
 
 import Header from './components/Header';
@@ -14,6 +14,7 @@ import Trail from './components/Trail';
 import Footer from './components/Footer';
 
 function App() {
+  /*
   const [showSplash, setShowSplash] = useState(true);
   const [terminalLines, setTerminalLines] = useState([
     '<span class="prompt">gevoglanyan@archlinux:~$</span> <span class="command">pwd</span>',
@@ -25,8 +26,6 @@ function App() {
   const [showPhase, setShowPhase] = useState('cleak');
   const [typedCommand, setTypedCommand] = useState('');
   const [cleared] = useState(false);
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (showPhase !== 'cleak') return;
@@ -55,8 +54,8 @@ function App() {
       } else {
         clearInterval(interval);
         setTimeout(() => {
-          setTerminalLines([]);  
-          setTypedCommand('');   
+          setTerminalLines([]);
+          setTypedCommand('');
           setTimeout(() => {
             setShowPhase('boot');
           }, 150);
@@ -65,8 +64,7 @@ function App() {
     }, 150);
     return () => clearInterval(interval);
   }, [showPhase]);
-  
-  
+
   useEffect(() => {
     if (showPhase !== 'boot') return;
     let i = 0;
@@ -77,77 +75,52 @@ function App() {
         i++;
       } else {
         clearInterval(interval);
-        setTerminalLines(prev => [...prev, `<span class="prompt">gevoglanyan@archlinux:~$</span> <span class="command">${bootCommand}</span>`, 
-                                                  '<br /><br />','Server Starting...', '<br />', 'Connecting to gevoglanyan.com']);
+        setTerminalLines(prev => [...prev, `<span class="prompt">gevoglanyan@archlinux:~$</span> <span class="command">${bootCommand}</span>`,
+          '<br /><br />', 'Server Starting...', '<br />', 'Connecting to gevoglanyan.com']);
         setTypedCommand('');
         setTimeout(() => setShowSplash(false), 1500);
       }
     }, 150);
     return () => clearInterval(interval);
   }, [showPhase]);
+  */
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
-      {showSplash ? (
-        <div className="fixed inset-0 z-50 bg-black text-[white] flex flex-col items-center justify-center p-10 font-mono text-xl text-center">
-          <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+      <div className="min-h-screen bg-black text-[white] font-sans">
+        <Trail />
+        <Header />
+        <Dots />
+
+        <div className="fixed top-4 right-4 z-50 md:hidden">
+          <div className="fixed top-4 right-4 z-[9999] md:hidden pointer-events-auto">
             <button
-              onClick={() => setShowSplash(false)}
-              className="bg-transparent  text-white px-6 py-2 rounded hover:hover:text-white transition"
+              onClick={() => setIsMobileMenuOpen(prev => !prev)}
+              className="relative flex flex-col justify-between w-8 h-6 p-1 text-white z-[9999]"
             >
-              Skip Animation
+              <span className="block h-0.5 w-full bg-white" />
+              <span className="block h-0.5 w-full bg-white" />
+              <span className="block h-0.5 w-full bg-white" />
             </button>
           </div>
-
-          <div className="w-full whitespace-pre-wrap leading-relaxed max-w-2xl">
-            {!cleared && terminalLines.map((line, idx) => ( 
-              <p key={idx} className="animate-pulse-once" dangerouslySetInnerHTML={{ __html: line }}></p>
-            ))}
-            {typedCommand && (
-              <p>
-                <span className="text-[white]">gevoglanyan@archlinux:~$</span> <span>{typedCommand}</span>
-                <span className="animate-blink">|</span>
-              </p>
-            )}
-          </div>
         </div>
-      ) : (
-        <div className="min-h-screen bg-black text-[white] font-sans">
-          
-          <Trail />
-          <Header />
-          <Dots />
-          
-          <div className="fixed top-4 right-4 z-50 md:hidden">
-            <div className="fixed top-4 right-4 z-[9999] md:hidden pointer-events-auto">
-              <button
-                onClick={() => setIsMobileMenuOpen(prev => !prev)}
-                className="relative flex flex-col justify-between w-8 h-6 p-1 text-white z-[9999]"
-              >
-                <span className="block h-0.5 w-full bg-white" />
-                <span className="block h-0.5 w-full bg-white" />
-                <span className="block h-0.5 w-full bg-white" />
-              </button>
-            </div>
 
-          </div>
+        {isMobileMenuOpen && <Menu onClose={() => setIsMobileMenuOpen(false)} />}
 
-          {isMobileMenuOpen && <Menu onClose={() => setIsMobileMenuOpen(false)} />}
-          
-          <main className="pt-0">
-            
-            <Landing />
-            <About />
-            <Skills />
-            <Projects />
-            <Gaming />
-            <Contact />
+        <main className="pt-0">
+          <Landing />
+          <About />
+          <Skills />
+          <Projects />
+          <Gaming />
+          <Contact />
+        </main>
 
-          </main>
+        <Footer />
+      </div>
 
-          <Footer />
-        </div>
-      )}
       <Analytics />
     </>
   );

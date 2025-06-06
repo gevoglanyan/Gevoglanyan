@@ -3,38 +3,41 @@ import React from 'react';
 const About = () => {
   return (
     <section
-      id="about"
-      className="min-h-[calc(100vh-60px)] flex flex-col justify-center items-center px-6 md:px-12 lg:px-24 py-20 text-center bg-transparent relative"
-    >
-      <div className="max-w-4xl w-full z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-10">
-          ABOUT
-        </h2>
+  id="about"
+  className="flex flex-col justify-start items-center px-6 md:px-12 lg:px-24 py-12 text-center bg-transparent relative"
+>
+  <div className="max-w-4xl w-full z-10">
 
-        <br />
+    <br /> <br /> <br />
 
-        <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
-          <span className="block">
-            Hey! I’m <span className="text-white font-semibold">Harutyun Gevoglanyan</span>, a passionate full-stack developer who loves crafting intuitive user experiences and building meaningful products.
-          </span>
+    <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-8">
+      ABOUT
+    </h2>
 
-          <span className="block">
-            I'm a freelance developer, building modern web apps for clients using <span className="text-white font-semibold">React, Next.js, Node.js, Express.js and MySQL/MongoDB</span>.
-          </span>
+    <br />
 
-          <span className="block">
-            My skill set includes <span className="text-white font-semibold">Java, JavaScript, TypeScript, Python, MongoDB, MySQL, Express, and Tailwind CSS</span>. I'm comfortable with development tools like <span className="text-white font-semibold"> Git, Docker, VS Code, Figma, and Vercel </span>, and I'm always learning something new to level up my work.
-          </span>
-    
-          <br /> <br />
-          
-          <span className="block">
-            Thanks for checking out my site — feel free to connect or reach out!
-          </span>
+    <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
+      <p>
+        Hey! I’m <span className="text-white font-semibold">Harutyun Gevoglanyan</span>, a passionate full-stack developer who loves crafting intuitive user experiences and building meaningful products.
+      </p>
 
-          <br /> <br /> <br /> <br />
+      <p>
+        I'm a freelance developer, building modern web apps for clients using <span className="text-white font-semibold">React, Next.js, Node.js, Express.js and MySQL/MongoDB</span>.
+      </p>
 
-          <div className="social-icons flex justify-center space-x-8 mt-8">
+      <p>
+        My skill set includes <span className="text-white font-semibold">Java, JavaScript, TypeScript, Python, MongoDB, MySQL, Express, and Tailwind CSS</span>. I'm comfortable with development tools like <span className="text-white font-semibold">Git, Docker, VS Code, Figma, and Vercel</span>, and I'm always learning something new to level up my work.
+      </p>
+
+      <br /> <br /> 
+
+      <p>
+        Thanks for checking out my site — feel free to connect or reach out!
+      </p>
+
+      <br /> <br />
+
+      <div className="social-icons flex justify-center space-x-8 mt-8">
             <a
               href="https://github.com/gevoglanyan"
               target="_blank"
