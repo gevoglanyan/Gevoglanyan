@@ -33,6 +33,9 @@ const MobileMenu = ({ onClose }) => {
     <aside className="flex md:hidden fixed inset-0 z-40 h-full w-full bg-black px-6 pt-[1vh]">
       <div className="flex flex-col justify-center w-full">
         <div className="relative w-fit mx-auto">
+
+          < br />
+          
           <ul className="flex flex-col gap-6 uppercase text-2xl text-white">
             {sections.map((section, idx) => (
               <li key={section.id}>

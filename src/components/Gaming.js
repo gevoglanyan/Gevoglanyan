@@ -9,7 +9,7 @@ const Gaming = () => {
       <div className="max-w-4xl w-full z-10 space-y-12">
         <div>
 
-          <br /> <br /> <br />
+          <br /> <br /> <br /> <br />
 
           <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-4">
             GAMING
@@ -64,10 +64,8 @@ const Gaming = () => {
           </a>
         </div>
 
-        <br/> <br/>
-
         <div>
-          <span className="block text-3xl md:text-2xl font-semibold text-white text-center">
+          <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-16">
             I will add more!
           </span>
         </div>

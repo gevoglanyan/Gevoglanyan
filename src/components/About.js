@@ -18,15 +18,15 @@ const About = () => {
 
     <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
       <p>
-        Hey! I’m <span className="text-white font-semibold">Harutyun Gevoglanyan</span>, a passionate full-stack developer who loves crafting intuitive user experiences and building meaningful products.
+        Hi, I’m <span className="text-white font-semibold">Harutyun Gevoglanyan</span> — a full-stack developer from California who’s passionate about building clean, scalable, and user-friendly web experiences.
       </p>
 
       <p>
-        I'm a freelance developer, building modern web apps for clients using <span className="text-white font-semibold">React, Next.js, Node.js, Express.js and MySQL/MongoDB</span>.
+        I work with modern tools like <span className="text-white font-semibold">React, Next.js, Node.js, and Express</span>, and I'm well-versed in both <span className="text-white font-semibold">MySQL</span> and <span className="text-white font-semibold">MongoDB</span> for database solutions. Whether it's a business site, e-commerce platform, or interactive app — I love turning ideas into reality.
       </p>
 
       <p>
-        My skill set includes <span className="text-white font-semibold">Java, JavaScript, TypeScript, Python, MongoDB, MySQL, Express, and Tailwind CSS</span>. I'm comfortable with development tools like <span className="text-white font-semibold">Git, Docker, VS Code, Figma, and Vercel</span>, and I'm always learning something new to level up my work.
+        My toolkit includes <span className="text-white font-semibold">JavaScript, TypeScript, Java, Python, C/C++</span>, along with dev tools like <span className="text-white font-semibold">Git, Docker, Figma, Jira, and VS Code</span>. I regularly deploy projects using <span className="text-white font-semibold">Vercel</span> or <span className="text-white font-semibold">Netlify</span> and integrate APIs like <span className="text-white font-semibold">Stripe, PayPal Checkout, and Google Maps</span>.
       </p>
 
       <br /> <br /> 
@@ -35,7 +35,7 @@ const About = () => {
         Thanks for checking out my site — feel free to connect or reach out!
       </p>
 
-      <br /> <br />
+      <br /> <br /> <br />
 
       <div className="social-icons flex justify-center space-x-8 mt-8">
             <a
