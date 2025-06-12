@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const titles = ["SOFTWARE ENGINEER", "FULL STACK DEVELOPER", "WEB DEVELOPER", "GAMER", "FRONT-END DEVELOPER", "BACK-END DEVELOPER"];
+const titles = ["SOFTWARE ENGINEER", "FULL STACK DEVELOPER", "WEB DEVELOPER", "GAMER", "FRONT-END DEVELOPER", "BACK-END DEVELOPER", "UNEMPLOYED"];
 
 const Landing = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -56,28 +56,30 @@ const Landing = () => {
 
         <br />
 
-        <h2 className="text-2xl md:text-3xl font-semibold text-[white] tracking-widest mt-8 mb-10">
-          Other Websites Made by 
-          <br /> <br /> 
-          Harutyun Gevoglanyan
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-wide mt-16 mb-8">
+          Not to Brag, But These Are Worth a Look
         </h2>
 
-        <br />
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-4">
+          <a
+            href="https://iaquaaquatics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 text-xl md:text-2xl font-semibold hover:underline transition"
+          >
+            iAqua Aquatics
+          </a>
 
-        <div className="text-2xl md:text-2xl font-semibold text-[white] tracking-widest text-center space-y-4 mt-4">
-          <div className="space-y-2">
-            <div className="text-cyan-400">
-              <a href="https://iaquaaquatics.com" target="_blank" rel="noopener noreferrer">
-                iAqua Aquatics
-              </a>
-            </div>
-            <p>&</p>
-            <div className="text-cyan-400">
-              <a href="https://gmgtransportation.com" target="_blank" rel="noopener noreferrer">
-                GMG Transportation
-              </a>
-            </div>
-          </div>
+          <span className="text-white text-xl md:text-2xl font-semibold">&</span>
+
+          <a
+            href="https://gmgtransportation.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 text-xl md:text-2xl font-semibold hover:underline transition"
+          >
+            GMG Transportation
+          </a>
         </div>
       </div>
     </section>

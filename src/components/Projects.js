@@ -141,9 +141,36 @@ const Projects = () => {
           </div>
         </div>
 
+        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8 mt-20">
+          <h3 className="text-2xl font-semibold text-white mb-4">Binary Bros Hotel</h3>
+
+          <p>
+            A full-featured hotel management system designed for both guest and admin users.
+          </p>
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
+            <ul className="flex flex-wrap justify-center gap-4 text-base">
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Java</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">JavaFX</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">MySQL</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
+             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
+              <li>Guest Login & Session Resume</li>
+              <li>Admin Dashboard with Filters</li>
+              <li>User Booking & History View</li>
+              <li>Dynamic Check-In & Survey Forms</li>
+            </ul>
+          </div>
+        </div>
+
         <div>
           <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-4">
-            I will add more!
+            I will add more Projects!
           </span>
         </div>
       </div>

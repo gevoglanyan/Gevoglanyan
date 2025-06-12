@@ -48,6 +48,23 @@ const Gaming = () => {
           </a>
 
           <a
+            href="https://www.twitch.tv/haroldfps"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-8 w-8 text-white"
+              viewBox="0 0 512 512"
+              fill="currentColor"
+            >
+              <path d="M391.2 103.5H352.5v109.7h38.6zM285 103H246.4V212.8H285zM120.8 0 24.3 91.4V420.6H140.1V512l96.5-91.4h77.3L487.7 256V0zM449.1 237.8l-77.2 73.1H294.6l-67.6 64v-64H140.1V36.6H449.1z"/>
+            </svg>
+            
+          </a>
+
+          <a
             href="https://x.com/haroldfps"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,7 +83,7 @@ const Gaming = () => {
 
         <div>
           <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-16">
-            I will add more!
+            I will add more Gaming related information! 
           </span>
         </div>
       </div>

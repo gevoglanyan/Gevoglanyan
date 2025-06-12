@@ -60,12 +60,6 @@ const Skills = () => {
               ))}
             </ul>
           </div>
-
-         <div>
-          <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-14">
-            I will add more!
-          </span>
-        </div>
         </div>
       </div>
     </section>

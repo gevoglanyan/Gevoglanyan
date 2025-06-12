@@ -35,6 +35,19 @@ const About = () => {
         Thanks for checking out my site — feel free to connect or reach out!
       </p>
 
+      <br /> <br /> 
+
+      <div className="mt-8">
+        <a
+          href="/Resume.pdf"
+          download
+          className="inline-block bg-cyan-400 text-black font-semibold text-lg px-6 py-3 rounded-lg shadow-md hover:bg-cyan-300 transition duration-300"
+        >
+          Harutyun Gevoglanyan's Resume
+        </a>
+      </div>
+
+
       <br /> <br /> <br />
 
       <div className="social-icons flex justify-center space-x-8 mt-8">
