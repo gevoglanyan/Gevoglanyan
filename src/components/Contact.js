@@ -95,7 +95,7 @@ const Contact = () => {
                 disabled={state.submitting}
                 className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold py-2 px-8 rounded-lg transition duration-300"
               >
-                {state.submitting ? 'Sending...' : 'Submit'}
+                {state.submitting ? 'Sending...' : 'Submit Form'}
               </button>
             </div>
           </form>
