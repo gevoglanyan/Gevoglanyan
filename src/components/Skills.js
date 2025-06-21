@@ -28,7 +28,7 @@ const Skills = () => {
           <div>
             <h3 className="text-2xl font-semibold text-white mb-6">Databases</h3>
             <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {["MySQL", "MongoDB"].map(db => (
+              {["MySQL", "PostgreSQL", "MongoDB"].map(db => (
                 <li key={db} className="bg-cyan-400 text-black px-4 py-2 rounded-lg">{db}</li>
               ))}
             </ul>
