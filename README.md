@@ -1,4 +1,4 @@
-## 🌐 Portfolio
+## Portfolio
 
 ### [gevoglanyan.com](https://www.gevoglanyan.com)
 
