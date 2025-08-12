@@ -19,7 +19,7 @@ const Gaming = () => {
 
           <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
             <img
-              src="/pictures/Harold.JPG"
+              src="/pictures/Harold.jpg"
               alt="Harold"
               className="w-48 h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover"
             />

@@ -21,7 +21,7 @@ const Projects = () => {
           </p>
 
           <p>
-            This is a <span className="italic text-white font-medium">passion project</span> currently in progress, being developed <br /> for release on the Apple App Store and Google Play Store.
+            This is a <span className="italic text-white font-medium">passion project</span> currently in progress, being developed for release on the Apple App Store and Google Play Store.
           </p>
 
           <br />
@@ -29,9 +29,9 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Game Modes:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Penalty Shootout</li>
-              <li>Crossbar Challenge</li>
-              <li>Freekicks</li>
+              <li>• Penalty Shootouts</li>
+              <li>• Crossbar Challenges</li>
+              <li>• Freekicks</li>
             </ul>
           </div>
 
@@ -40,10 +40,10 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Games:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>1v1s</li>
-              <li>3v3s</li>
-              <li>6v6s</li>
-              <li>11v11s</li>
+              <li>• 1v1s</li>
+              <li>• 3v3s</li>
+              <li>• 6v6s</li>
+              <li>• 11v11s</li>
             </ul>
           </div>
 
@@ -61,12 +61,12 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Friends List (Search, Add, & Remove Functionality)</li>
-              <li>Leaderboards (Weekly, Monthly, & All-Time)</li>
-              <li>Match Logging for Various Game Modes & Games</li>
-              <li>ELO Rating System with Win/Loss Tracking</li>
+              <li>• Friends List (Search, Add, & Remove Functionality)</li>
+              <li>• Leaderboards (Weekly, Monthly, & All-Time)</li>
+              <li>• Match Logging for Various Game Modes & Games</li>
+              <li>• ELO Rating System with Win/Loss Tracking</li>
               <br />
-              <li><span className="italic text-white font-medium">More Being Added</span></li>
+              <li><span className="italic text-white font-medium">More Being Added!</span></li>
             </ul>
           </div>
         </div>
@@ -92,11 +92,11 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Google Maps routing, fare estimation, and location autocomplete</li>
-              <li>Stripe Checkout with secure payment integration</li>
-              <li>Dynamic booking flow with multi-step navigation</li>
-              <li>Filterable vehicle carousels and real-time pricing</li>
-              <li>Fully deployed with SEO and mobile-first UX</li>
+              <li>• Google Maps routing, fare estimation, and location autocomplete</li>
+              <li>• Stripe Checkout with secure payment integration</li>
+              <li>• Dynamic booking flow with multi-step navigation</li>
+              <li>• Filterable vehicle carousels and real-time pricing</li>
+              <li>• Fully deployed with SEO and mobile-first UX</li>
             </ul>
           </div>
 
@@ -148,11 +148,11 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Category-based product filtering (e.g., Betta, Sword Plants)</li>
-              <li>Custom cart with localStorage and state handling</li>
-              <li>PayPal Checkout for seamless transactions</li>
-              <li>Optimized for mobile-first and accessible UX</li>
-              <li>Clean, modern UI with minimal gradients</li>
+              <li>• Category-based product filtering (e.g., Betta, Sword Plants)</li>
+              <li>• Custom cart with localStorage and state handling</li>
+              <li>• PayPal Checkout for seamless transactions</li>
+              <li>• Optimized for mobile-first and accessible UX</li>
+              <li>• Clean, modern UI with minimal gradients</li>
             </ul>
           </div>
 
@@ -203,11 +203,11 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Static generation with Next.js for speed and SEO</li>
-              <li>Lazy-loaded assets and responsive font scaling</li>
-              <li>Modular components with Tailwind utility classes</li>
-              <li>Vercel deployment with fast commits-to-live</li>
-              <li>Localization-ready structure for multilingual content</li>
+              <li>• Static Generation with Next.js</li>
+              <li>• Lazy-Loaded Assets and Responsive Font Scaling</li>
+              <li>• Modular Components with Tailwind utility Classes</li>
+              <li>• Vercel Deployment</li>
+              <li>• Localization-Ready Structure for Multilingual Content</li>
             </ul>
           </div>
 
@@ -257,11 +257,11 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Guest Login & Resume Functionality</li>
-              <li>Admin Dashboard with Game-Specific Filters</li>
-              <li>User Dashboard with Game History</li>
-              <li>Dynamic Questionnaire Forms</li>
-              <li>CSV Export and JSON Game Data Storage</li>
+              <li>• Guest Login & Resume Functionality</li>
+              <li>• Admin Dashboard with Game-Specific Filters</li>
+              <li>• User Dashboard with Game History</li>
+              <li>• Dynamic Questionnaire Forms</li>
+              <li>• CSV Export and JSON Game Data Storage</li>
             </ul>
           </div>
         </div>
@@ -285,10 +285,10 @@ const Projects = () => {
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
              <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>Guest Login & Session Resume</li>
-              <li>Admin Dashboard with Filters</li>
-              <li>User Booking & History View</li>
-              <li>Dynamic Check-In & Survey Forms</li>
+              <li>• Guest Login & Session Resume</li>
+              <li>•Admin Dashboard with Filters</li>
+              <li>• User Booking & History View</li>
+              <li>• Dynamic Check-In & Survey Forms</li>
             </ul>
           </div>
         </div>
