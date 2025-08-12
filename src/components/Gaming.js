@@ -15,7 +15,17 @@ const Gaming = () => {
             GAMING
           </h2>
 
-          <br />
+          <br /> <br />
+
+          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
+            <img
+              src="/pictures/Harold.JPG"
+              alt="Harold"
+              className="w-48 h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover"
+            />
+          </div>
+
+          <br /> <br />
 
           <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
             <p>

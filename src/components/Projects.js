@@ -15,6 +15,63 @@ const Projects = () => {
         </h2>
 
         <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
+          <h3 id="two-touch" className="text-2xl font-bold text-white">Two Touch</h3>
+          <p>
+            <span className="font-semibold text-white">Two Touch</span> is an IRL Soccer Companion App built for tracking and gamifying 1v1 and small-sided soccer challenges.  
+          </p>
+
+          <p>
+            This is a <span className="italic text-white font-medium">passion project</span> currently in progress, being developed <br /> for release on the Apple App Store and Google Play Store.
+          </p>
+
+          <br />
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Game Modes:</h4>
+            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
+              <li>Penalty Shootout</li>
+              <li>Crossbar Challenge</li>
+              <li>Freekicks</li>
+            </ul>
+          </div>
+
+          <br />
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Games:</h4>
+            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
+              <li>1v1s</li>
+              <li>3v3s</li>
+              <li>6v6s</li>
+              <li>11v11s</li>
+            </ul>
+          </div>
+
+          <br />
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
+            <ul className="flex flex-wrap justify-center gap-4 text-base">
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React Native</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Firebase Auth</li>
+              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Firestore</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
+            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
+              <li>Friends List (Search, Add, & Remove Functionality)</li>
+              <li>Leaderboards (Weekly, Monthly, & All-Time)</li>
+              <li>Match Logging for Various Game Modes & Games</li>
+              <li>ELO Rating System with Win/Loss Tracking</li>
+              <br />
+              <li><span className="italic text-white font-medium">More Being Added</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
           <h3 className="text-2xl font-bold text-white">GMG Transportation</h3>
           <p>
             <span className="font-semibold text-white">GMG Transportation</span> is a high-end vehicle booking platform built for a private transportation company.
@@ -41,6 +98,33 @@ const Projects = () => {
               <li>Filterable vehicle carousels and real-time pricing</li>
               <li>Fully deployed with SEO and mobile-first UX</li>
             </ul>
+          </div>
+
+          {/*
+
+          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
+            <img
+              src="/pictures/GMG.png"
+              alt="GMG"
+              className="mx-auto scale-[0.8]"
+            />
+          </div>
+
+          */}
+
+          <br />
+
+          <div className="text-2xl font-semibold text-white mb-4">
+            <p>
+              <a
+                href="https://gmgtransportation.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-white transition"
+              >
+                GMG Transportation
+              </a>
+            </p>
           </div>
         </div>
 
@@ -71,6 +155,33 @@ const Projects = () => {
               <li>Clean, modern UI with minimal gradients</li>
             </ul>
           </div>
+
+          {/*
+
+          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
+            <img
+              src="/pictures/iAqua.png"
+              alt="GMG"
+              className="mx-auto scale-[0.8]"
+            />
+          </div>
+
+          */}
+
+          <br />
+
+          <div className="text-2xl font-semibold text-white mb-4">
+            <p>
+              <a
+                href="https://iaquaaquatics.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-white transition"
+              >
+                iAqua Aquatics
+              </a>
+            </p>
+          </div>
         </div>
 
         <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
@@ -86,7 +197,6 @@ const Projects = () => {
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Next.js</li>
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Tailwind CSS</li>
               <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Vercel</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">i18n (planned)</li>
             </ul>
           </div>
 
@@ -99,6 +209,21 @@ const Projects = () => {
               <li>Vercel deployment with fast commits-to-live</li>
               <li>Localization-ready structure for multilingual content</li>
             </ul>
+          </div>
+
+          <br />
+
+          <div className="text-2xl font-semibold text-white mb-4">
+            <p>
+              <a
+                href="https://sasnatsrer.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-white transition"
+              >
+                Sasna Tsrer
+              </a>
+            </p>
           </div>
         </div>
 

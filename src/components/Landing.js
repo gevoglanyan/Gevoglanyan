@@ -49,6 +49,8 @@ const Landing = () => {
           Expert at debugging and processing ChatGPT faster than the speed of light.
         </p>
 
+        <br />
+
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
           <a href="#about" className="bg-[cyan] text-black font-semibold px-6 py-2 rounded hover:bg-[cyan] transition">Learn More</a>
           <a href="#contact" className="bg-[cyan] text-black font-semibold px-6 py-2 rounded hover:bg-[cyan] transition">Contact Me</a>
@@ -81,6 +83,20 @@ const Landing = () => {
             GMG Transportation
           </a>
         </div>
+
+        <br />
+
+        <h2 className="text-2xl md:text-2xl font-extrabold text-white tracking-wide mt-16 mb-8">
+          Currently Working on
+          <br /> <br />
+          <a href="#two-touch" className="text-cyan-400 hover:text-white transition">
+            Two Touch
+          </a>
+          <br /> <br /> <br />
+          <span className="text-lg md:text-lg font-bold text-white/80 tracking-wide">
+            Coming in Spring 2026
+          </span>
+        </h2>
       </div>
     </section>
   );
