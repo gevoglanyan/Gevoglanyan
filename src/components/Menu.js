@@ -34,7 +34,7 @@ const MobileMenu = ({ onClose }) => {
       <div className="flex flex-col justify-center w-full">
         <div className="relative w-fit mx-auto">
 
-          < br />
+          < br /> < br />
           
           <ul className="flex flex-col gap-6 uppercase text-2xl text-white">
             {sections.map((section, idx) => (
@@ -90,6 +90,8 @@ const MobileMenu = ({ onClose }) => {
                 </svg>
               </a>
 
+              < br /> < br /> 
+
               <a 
                 href="https://www.tiktok.com/@hgevoglanyan" 
                 target="_blank" 
@@ -106,6 +108,9 @@ const MobileMenu = ({ onClose }) => {
                 </svg>
               </a>
             </div>
+
+            < br /> < br />
+          
           </section>
         </footer>
       </div>
