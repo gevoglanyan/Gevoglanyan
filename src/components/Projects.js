@@ -1,303 +1,188 @@
 import React from 'react';
 
+const projects = [
+  {
+    id: 'two-touch',
+    name: 'Two Touch',
+    description: 'Two Touch is an IRL Soccer Companion App built for tracking and gamifying 1v1 and small-sided soccer challenges.',
+    subtext: 'This is a passion project currently in progress, being developed for release on the Apple & Google Play Store.',
+    tools: ['React', 'Firebase Auth', 'Firestore'],
+    features: [
+      'Friends List (Search, Add, & Remove Functionality)',
+      'Leaderboards (Weekly, Monthly, & All-Time)',
+      'Match Logging for Various Game Modes & Games',
+      'ELO Rating System with Win/Loss Tracking',
+    ],
+    categories: [
+      { title: 'Game Modes', items: ['Penalty Shootouts', 'Crossbar Challenges', 'Freekicks', '1v1s', '3v3s', '6v6s', '11v11s'] },
+    ]
+  },
+  {
+    name: 'GMG Transportation',
+    description: 'GMG Transportation is a high-end vehicle booking platform built for a private transportation company.',
+    tools: ['React', 'Next.js', 'Stripe API', 'Google Maps API'],
+    features: [
+      'Google Maps routing, fare estimation, and location autocomplete',
+      'Stripe Checkout with secure payment integration',
+      'Dynamic booking flow with multi-step navigation',
+      'Filterable vehicle carousels and real-time pricing',
+      'Fully deployed with SEO and mobile-first UX'
+    ],
+    link: { text: 'GMG Transportation', href: 'https://gmgtransportation.com' }
+  },
+  {
+    name: 'iAqua Aquatics',
+    description: 'iAqua Aquatics is an e-commerce site tailored for aquarium enthusiasts.',
+    tools: ['React', 'Next.js', 'PayPal API'],
+    features: [
+      'Category-based product filtering (e.g., Betta, Sword Plants)',
+      'Custom cart with localStorage and state handling',
+      'PayPal Checkout for seamless transactions',
+      'Optimized for mobile-first and accessible UX',
+      'Clean, modern UI with minimal gradients'
+    ],
+    link: { text: 'iAqua Aquatics', href: 'https://iaquaaquatics.com' }
+  },
+  {
+    name: 'Sasna Tsrer',
+    description: 'Sasna Tsrer is a multilingual cultural celebration site focused on promoting Armenian heritage.',
+    tools: ['React', 'Next.js'],
+    features: [
+      'Static Generation with Next.js',
+      'Lazy-Loaded Assets and Responsive Font Scaling',
+      'Modular Components with Tailwind utility Classes',
+      'Vercel Deployment',
+      'Localization-Ready Structure for Multilingual Content'
+    ],
+    link: { text: 'Sasna Tsrer', href: 'https://sasnatsrer.vercel.app/' }
+  },
+  {
+    name: 'Techmetrica',
+    description: 'Techmetrica is a psychology-based web platform that explores decision-making and self-reflection through interactive games.',
+    tools: ['React', 'Next.js', 'Node.js', 'Express.js', 'MySQL'],
+    games: ['Try Buy Goodbye', 'Game of Drones', 'Sensi Bot', 'Folk Theories of Phones'],
+    features: [
+      'Guest Login & Resume Functionality',
+      'Admin Dashboard with Game-Specific Filters',
+      'User Dashboard with Game History',
+      'Dynamic Questionnaire Forms',
+      'CSV Export and JSON Game Data Storage'
+    ]
+  },
+  {
+    name: 'Binary Bros Hotel',
+    description: 'A full-featured hotel management system designed for both guest and admin users.',
+    tools: ['Java', 'JavaFX', 'MySQL'],
+    features: [
+      'Guest Login & Session Resume',
+      'Admin Dashboard with Filters',
+      'User Booking & History View',
+      'Dynamic Check-In & Survey Forms'
+    ]
+  }
+];
+
 const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col justify-start items-center px-6 md:px-12 lg:px-24 py-12 text-center bg-transparent relative overflow-x-hidden"
+      className="px-6 md:px-12 lg:px-24 py-20 bg-transparent text-white"
     >
-      <div className="max-w-5xl w-full z-10 space-y-24">
-
-        <br />
-
-        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-16">
           PROJECTS
         </h2>
 
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
-          <h3 id="two-touch" className="text-2xl font-bold text-white">Two Touch</h3>
-          <p>
-            <span className="font-semibold text-white">Two Touch</span> is an IRL Soccer Companion App built for tracking and gamifying 1v1 and small-sided soccer challenges.  
-          </p>
+        <div className="space-y-20">
+          {projects.map((project) => (
+            <div
+              key={project.id || project.name}
+              id={project.id || undefined}
+              className="bg-white/5 rounded-2xl p-8 md:p-12 shadow-lg border border-white/10 text-center"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{project.name}</h3>
+              <p className="text-white/90 mb-2">{project.description}</p>
+              {project.subtext && (
+                <p className="text-white/70 mb-2">{project.subtext}</p>
+              )}
 
-          <p>
-            This is a <span className="italic text-white font-medium">passion project</span> currently in progress, being developed for release on the Apple App Store and Google Play Store.
-          </p>
+              {project.categories && project.categories.map((cat, i) => (
+                <div key={i} className="mb-6">
 
-          <br />
+                  <br />
+                  
+                  <h4 className="text-lg font-semibold text-white mb-2">{cat.title}:</h4>
+                  <ul className="space-y-1 text-white/80">
+                    {cat.items.map((item, idx) => (
+                      <li key={idx}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
 
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Game Modes:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Penalty Shootouts</li>
-              <li>• Crossbar Challenges</li>
-              <li>• Freekicks</li>
-            </ul>
-          </div>
-
-          <br />
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Games:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• 1v1s</li>
-              <li>• 3v3s</li>
-              <li>• 6v6s</li>
-              <li>• 11v11s</li>
-            </ul>
-          </div>
-
-          <br />
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React Native</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Firebase Auth</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Firestore</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Friends List (Search, Add, & Remove Functionality)</li>
-              <li>• Leaderboards (Weekly, Monthly, & All-Time)</li>
-              <li>• Match Logging for Various Game Modes & Games</li>
-              <li>• ELO Rating System with Win/Loss Tracking</li>
               <br />
-              <li><span className="italic text-white font-medium">More Being Added!</span></li>
-            </ul>
-          </div>
+
+              {project.tools && (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Tools:</h4>
+                  <ul className="flex flex-wrap justify-center gap-3">
+                    {project.tools.map((tool, idx) => (
+                      <li key={idx} className="bg-cyan-400 text-black px-4 py-2 rounded-lg">
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <br />
+
+              {project.games && (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Games:</h4>
+                  <ul className="flex flex-wrap justify-center gap-4">
+                    {project.games.map((game, idx) => (
+                      <li key={idx} className="bg-cyan-400 text-black px-4 py-2 rounded-lg">
+                        {game}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.features && (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Features:</h4>
+                  <ul className="space-y-1 text-white/80">
+                    {project.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                    {project.name === 'Two Touch' && (
+                      <li className="italic text-white/70">More Being Added!</li>
+                    )}
+                  </ul>
+                </div>
+              )}
+
+              {project.link && (
+                <div className="text-xl font-semibold mt-4">
+                  <a
+                    href={project.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-white transition"
+                  >
+                    {project.link.text}
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
-          <h3 className="text-2xl font-bold text-white">GMG Transportation</h3>
-          <p>
-            <span className="font-semibold text-white">GMG Transportation</span> is a high-end vehicle booking platform built for a private transportation company.
-          </p>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Next.js</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Tailwind CSS</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Stripe API</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Google Maps API</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Vercel</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Google Maps routing, fare estimation, and location autocomplete</li>
-              <li>• Stripe Checkout with secure payment integration</li>
-              <li>• Dynamic booking flow with multi-step navigation</li>
-              <li>• Filterable vehicle carousels and real-time pricing</li>
-              <li>• Fully deployed with SEO and mobile-first UX</li>
-            </ul>
-          </div>
-
-          {/*
-
-          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
-            <img
-              src="/pictures/GMG.png"
-              alt="GMG"
-              className="mx-auto scale-[0.8]"
-            />
-          </div>
-
-          */}
-
-          <br />
-
-          <div className="text-2xl font-semibold text-white mb-4">
-            <p>
-              <a
-                href="https://gmgtransportation.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-white transition"
-              >
-                GMG Transportation
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
-          <h3 className="text-2xl font-bold text-white">iAqua Aquatics</h3>
-          <p>
-            <span className="font-semibold text-white">iAqua Aquatics</span> is an e-commerce site tailored for aquarium enthusiasts.
-          </p>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Tailwind CSS</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">PayPal Checkout</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Vite</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Netlify</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Category-based product filtering (e.g., Betta, Sword Plants)</li>
-              <li>• Custom cart with localStorage and state handling</li>
-              <li>• PayPal Checkout for seamless transactions</li>
-              <li>• Optimized for mobile-first and accessible UX</li>
-              <li>• Clean, modern UI with minimal gradients</li>
-            </ul>
-          </div>
-
-          {/*
-
-          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
-            <img
-              src="/pictures/iAqua.png"
-              alt="GMG"
-              className="mx-auto scale-[0.8]"
-            />
-          </div>
-
-          */}
-
-          <br />
-
-          <div className="text-2xl font-semibold text-white mb-4">
-            <p>
-              <a
-                href="https://iaquaaquatics.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-white transition"
-              >
-                iAqua Aquatics
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
-          <h3 className="text-2xl font-bold text-white">Sasna Tsrer</h3>
-          <p>
-            <span className="font-semibold text-white">Sasna Tsrer</span> is a multilingual cultural celebration site focused on promoting Armenian heritage.
-          </p>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Next.js</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Tailwind CSS</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Vercel</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Static Generation with Next.js</li>
-              <li>• Lazy-Loaded Assets and Responsive Font Scaling</li>
-              <li>• Modular Components with Tailwind utility Classes</li>
-              <li>• Vercel Deployment</li>
-              <li>• Localization-Ready Structure for Multilingual Content</li>
-            </ul>
-          </div>
-
-          <br />
-
-          <div className="text-2xl font-semibold text-white mb-4">
-            <p>
-              <a
-                href="https://sasnatsrer.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-white transition"
-              >
-                Sasna Tsrer
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8">
-          <h3 className="text-2xl font-semibold text-white mb-4">Techmetrica</h3>
-          <p>
-            <span className="font-semibold text-white">Techmetrica</span> is a psychology-based web platform that explores decision-making and self-reflection through interactive games.
-          </p>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">React</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Next.js</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Node.js</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Express.js</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">MySQL</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Games:</h4>
-            <ul className="flex flex-col items-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Try Buy Goodbye</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Game of Drones</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Sensi Bot</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Folk Theories of Phones</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-            <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Guest Login & Resume Functionality</li>
-              <li>• Admin Dashboard with Game-Specific Filters</li>
-              <li>• User Dashboard with Game History</li>
-              <li>• Dynamic Questionnaire Forms</li>
-              <li>• CSV Export and JSON Game Data Storage</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="text-white/80 text-lg leading-relaxed text-center space-y-8 mt-20">
-          <h3 className="text-2xl font-semibold text-white mb-4">Binary Bros Hotel</h3>
-
-          <p>
-            A full-featured hotel management system designed for both guest and admin users.
-          </p>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Tools:</h4>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">Java</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">JavaFX</li>
-              <li className="bg-cyan-400 text-black px-4 py-2 rounded-lg">MySQL</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold text-lg mb-4">Features:</h4>
-             <ul className="list-none text-white/90 text-base leading-relaxed px-4 text-center space-y-2">
-              <li>• Guest Login & Session Resume</li>
-              <li>•Admin Dashboard with Filters</li>
-              <li>• User Booking & History View</li>
-              <li>• Dynamic Check-In & Survey Forms</li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-4">
-            I will add more Projects!
-          </span>
-        </div>
+        <p className="text-center text-2xl text-white font-semibold mt-24">
+          I will add more Projects!
+        </p>
       </div>
     </section>
   );

@@ -55,7 +55,7 @@ const Skills = () => {
           <div>
             <h3 className="text-2xl font-semibold text-white mb-6">Deployment & APIs</h3>
             <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {["Netlify", "Vercel", "Stripe API", "PayPal Checkout", "Google Maps API", "Google Auth"].map(item => (
+              {["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth"].map(item => (
                 <li key={item} className="bg-cyan-400 text-black px-4 py-2 rounded-lg">{item}</li>
               ))}
             </ul>
