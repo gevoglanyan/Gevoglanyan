@@ -23,7 +23,6 @@ function App() {
         <Header />
         <Dots />
 
-        {/* Mobile Hamburger Menu */}
         <div className="fixed top-4 right-4 z-50 md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(prev => !prev)}
@@ -37,7 +36,6 @@ function App() {
 
         {isMobileMenuOpen && <Menu onClose={() => setIsMobileMenuOpen(false)} />}
 
-        {/* Main Content with top padding to avoid header overlap */}
         <main className="pt-20 md:pt-0">
           <Landing />
           <About />
