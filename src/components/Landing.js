@@ -121,7 +121,7 @@ const Landing = () => {
             Currently Working on
           </h2>
           <a
-            href="#two-touch"
+            href="https://twotouchgame.vercel.app/"
             className="text-cyan-400 hover:text-white transition text-xl sm:text-2xl font-semibold"
           >
             Two Touch

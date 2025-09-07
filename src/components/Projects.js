@@ -30,6 +30,10 @@ const projects = [
         ],
       },
     ],
+    link: {
+      text: "Two Touch",
+      href: "https://twotouchgame.vercel.app/",
+    },
   },
   {
     name: "GMG Transportation",
