@@ -4,52 +4,41 @@ const Gaming = () => {
   return (
     <section
       id="gaming"
-      className="flex flex-col justify-start items-center px-6 md:px-12 lg:px-24 py-12 text-center bg-transparent relative"
+      className="flex flex-col justify-start items-center px-6 md:px-12 lg:px-24 py-20 text-center bg-transparent relative"
     >
-      <div className="max-w-4xl w-full z-10 space-y-12">
-        <div>
+      <div className="max-w-4xl w-full z-10 space-y-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          GAMING
+        </h2>
 
-          <br /> <br /> <br /> <br />
-
-          <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-md mb-4">
-            GAMING
-          </h2>
-
-          <br /> <br />
-
-          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
-            <img
-              src="/pictures/Harold.jpg"
-              alt="Harold"
-              className="w-48 h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover"
-            />
-          </div>
-
-          <br /> <br />
-
-          <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
-            <p>
-              I don’t play a lot of different games — just one consistently:{' '}
-              <span className="text-white font-semibold">Destiny 2</span>.
-            </p>
-            <p>
-              No long list of favorite titles — just Destiny 2, and that’s enough.
-            </p>
-          </div>
+        <div className="flex justify-center">
+          <img
+            src="/pictures/Harold.jpg"
+            alt="Harold"
+            className="w-48 h-48 rounded-full border-4 border-cyan-400 shadow-lg object-cover transform transition duration-300 hover:scale-105 hover:shadow-cyan-400/50"
+          />
         </div>
 
-        <br /> <br />
+        <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
+          <p>
+            I don’t play a lot of different games — just one consistently:{' '}
+            <span className="text-white font-semibold">Destiny 2</span>.
+          </p>
+          <p>
+            No long list of favorite titles — just Destiny 2, and that’s enough.
+          </p>
+        </div>
 
-        <div className="social-icons flex justify-center space-x-8 mt-8">
+        <div className="social-icons flex justify-center space-x-10">
           <a
             href="https://steamcommunity.com/id/haroldfps/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:scale-110 transform transition duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-white"
+              className="h-10 w-10 text-white hover:text-cyan-400 transition"
               viewBox="0 0 496 512"
               fill="currentColor"
             >
@@ -61,28 +50,27 @@ const Gaming = () => {
             href="https://www.twitch.tv/haroldfps"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:scale-110 transform transition duration-300"
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-8 w-8 text-white"
+              className="h-10 w-10 text-white hover:text-purple-400 transition"
               viewBox="0 0 512 512"
               fill="currentColor"
             >
               <path d="M391.2 103.5H352.5v109.7h38.6zM285 103H246.4V212.8H285zM120.8 0 24.3 91.4V420.6H140.1V512l96.5-91.4h77.3L487.7 256V0zM449.1 237.8l-77.2 73.1H294.6l-67.6 64v-64H140.1V36.6H449.1z"/>
             </svg>
-            
           </a>
 
           <a
             href="https://x.com/haroldfps"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:scale-110 transform transition duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-white"
+              className="h-10 w-10 text-white hover:text-cyan-400 transition"
               viewBox="0 0 512 512"
               fill="currentColor"
             >
@@ -92,8 +80,8 @@ const Gaming = () => {
         </div>
 
         <div>
-          <span className="block text-3xl md:text-2xl font-semibold text-white text-center pt-16">
-            I will add more Gaming related information! 
+          <span className="block text-3xl md:text-2xl font-semibold text-white text-center">
+            I will add more Gaming related information!
           </span>
         </div>
       </div>
