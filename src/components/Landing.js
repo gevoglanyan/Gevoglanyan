@@ -129,7 +129,7 @@ const Landing = () => {
 
           <div className="mt-8">
             <span className="inline-block px-4 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-medium">
-              Coming Spring 2026
+              Coming Summer 2026
             </span>
           </div>
         </div>
