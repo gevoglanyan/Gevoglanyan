@@ -94,8 +94,8 @@ function App() {
         <Header />
         <Dots />
 
-        <div className="fixed top-4 left-4 z-50 md:hidden">
-          <div className="fixed top-4 left-4 z-[9999] md:hidden pointer-events-auto">
+        <div className="fixed top-4 right-4 z-50 md:hidden">
+          <div className="fixed top-4 right-4 z-[9999] md:hidden pointer-events-auto">
             <button
               onClick={() => setIsMobileMenuOpen(prev => !prev)}
               className="relative flex flex-col justify-between w-8 h-6 p-1 text-white z-[9999]"
