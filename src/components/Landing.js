@@ -39,7 +39,7 @@ const Landing = () => {
   return (
     <section
       id="landing"
-      className="relative min-h-screen flex flex-col justify-center items-center px-6 md:px-12 bg-black text-center"
+      className="relative min-h-screen flex flex-col justify-center items-center px-6 md:px-12 pt-20 md:pt-0 bg-black text-center"
     >
       <motion.div
         className="max-w-4xl z-10"
