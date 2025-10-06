@@ -11,6 +11,29 @@ const fadeInUp = {
 };
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Languages",
+      items: ["JavaScript", "TypeScript", "Java", "Python", "C", "C++", "HTML", "CSS"],
+    },
+    {
+      title: "Databases",
+      items: ["MySQL", "PostgreSQL", "MongoDB"],
+    },
+    {
+      title: "Frameworks & Libraries",
+      items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "JavaFX", "JUnit"],
+    },
+    {
+      title: "Developer Tools",
+      items: ["Git", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse"],
+    },
+    {
+      title: "Deployment & APIs",
+      items: ["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth"],
+    },
+  ];
+
   return (
     <section
       id="skills"
@@ -28,139 +51,26 @@ const Skills = () => {
         </h2>
 
         <div className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto space-y-16">
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">Languages</h3>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {[
-                "JavaScript",
-                "TypeScript",
-                "Java",
-                "Python",
-                "C",
-                "C++",
-                "HTML",
-                "CSS",
-              ].map((lang, i) => (
-                <motion.li
-                  key={lang}
-                  className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-cyan-400 font-medium shadow-md hover:scale-110 hover:bg-white/20 transition"
-                  custom={i}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {lang}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">Databases</h3>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {["MySQL", "PostgreSQL", "MongoDB"].map((db, i) => (
-                <motion.li
-                  key={db}
-                  className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-cyan-400 font-medium shadow-md hover:scale-110 hover:bg-white/20 transition"
-                  custom={i}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {db}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              Frameworks & Libraries
-            </h3>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {[
-                "React",
-                "Next.js",
-                "Node.js",
-                "Express.js",
-                "Tailwind CSS",
-                "JavaFX",
-                "JUnit",
-              ].map((fw, i) => (
-                <motion.li
-                  key={fw}
-                  className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-cyan-400 font-medium shadow-md hover:scale-110 hover:bg-white/20 transition"
-                  custom={i}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {fw}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              Developer Tools
-            </h3>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {[
-                "Git",
-                "Docker",
-                "Figma",
-                "Jira",
-                "VS Code",
-                "IntelliJ",
-                "Visual Studio",
-                "Eclipse",
-              ].map((tool, i) => (
-                <motion.li
-                  key={tool}
-                  className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-cyan-400 font-medium shadow-md hover:scale-110 hover:bg-white/20 transition"
-                  custom={i}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {tool}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              Deployment & APIs
-            </h3>
-            <ul className="flex flex-wrap justify-center gap-4 text-base">
-              {[
-                "Netlify",
-                "Vercel",
-                "Stripe API",
-                "PayPal API",
-                "Google Maps API",
-                "Google Auth",
-              ].map((item, i) => (
-                <motion.li
-                  key={item}
-                  className="px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 text-cyan-400 font-medium shadow-md hover:scale-110 hover:bg-white/20 transition"
-                  custom={i}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
+          {skillCategories.map((category, idx) => (
+            <div key={idx}>
+              <h3 className="text-2xl font-semibold text-white mb-6">{category.title}</h3>
+              <ul className="flex flex-wrap justify-center gap-4 text-base">
+                {category.items.map((item, i) => (
+                  <motion.li
+                    key={item}
+                    className="px-5 py-2 rounded-full bg-cyan-400 text-black font-medium shadow-md hover:scale-110 hover:shadow-lg transition-all"
+                    custom={i}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </motion.div>
     </section>

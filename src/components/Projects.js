@@ -6,19 +6,17 @@ const projects = [
     id: "two-touch",
     name: "Two Touch",
     description:
-      "Two Touch is an IRL Soccer Companion App built for tracking and gamifying 1v1 and small-sided soccer challenges.",
-    subtext:
-      "This is a passion project currently in progress, being developed for release on the Apple & Google Play Store.",
+      "is a real-world soccer companion app that tracks and gamifies 1v1 and small-sided soccer challenges.",
     tools: ["React", "Firebase Auth", "Firestore"],
     features: [
-      "Friends List (Search, Add, & Remove Functionality)",
-      "Leaderboards (Weekly, Monthly, & All-Time)",
-      "Match Logging for Various Game Modes & Games",
-      "ELO Rating System with Win/Loss Tracking",
+      "Friends system with search, add, and remove functionality",
+      "Global leaderboards (weekly, monthly, and all-time)",
+      "Match logging across multiple game modes and formats",
+      "ELO-based ranking system with win/loss tracking",
     ],
     categories: [
       {
-        title: "Game Modes",
+        title: "Supported Game Modes",
         items: [
           "Penalty Shootouts",
           "Crossbar Challenges",
@@ -31,82 +29,94 @@ const projects = [
       },
     ],
     link: {
-      text: "Two Touch",
+      text: "View Project",
       href: "https://twotouchgame.vercel.app/",
     },
   },
   {
     name: "GMG Transportation",
     description:
-      "GMG Transportation is a high-end vehicle booking platform built for a private transportation company.",
+      "is a luxury vehicle booking platform built for a private transportation company, offering a seamless, user-friendly booking experience.",
     tools: ["React", "Next.js", "Stripe API", "Google Maps API"],
     features: [
       "Google Maps routing, fare estimation, and location autocomplete",
-      "Stripe Checkout with secure payment integration",
-      "Dynamic booking flow with multi-step navigation",
-      "Filterable vehicle carousels and real-time pricing",
-      "Fully deployed with SEO and mobile-first UX",
+      "Secure Stripe Checkout integration for online payments",
+      "Dynamic multi-step booking flow with real-time price updates",
+      "Filterable vehicle carousels with responsive design",
+      "SEO-optimized, fully deployed, and mobile-first experience",
     ],
     link: {
-      text: "GMG Transportation",
+      text: "Visit Website",
       href: "https://gmgtransportation.com",
     },
   },
   {
     name: "iAqua Aquatics",
     description:
-      "iAqua Aquatics is an e-commerce site tailored for aquarium enthusiasts.",
+      "is an online store designed for aquarium enthusiasts, featuring a clean, modern shopping experience.",
     tools: ["React", "Next.js", "PayPal API"],
     features: [
       "Category-based product filtering (e.g., Betta, Sword Plants)",
-      "Custom cart with localStorage and state handling",
-      "PayPal Checkout for seamless transactions",
-      "Optimized for mobile-first and accessible UX",
-      "Clean, modern UI with minimal gradients",
+      "Persistent cart powered by localStorage and React state",
+      "Integrated PayPal Checkout for secure transactions",
+      "Fully responsive and accessibility-optimized layout",
+      "Minimal, modern UI design with smooth user interactions",
     ],
-    link: { text: "iAqua Aquatics", href: "https://iaquaaquatics.com" },
+    link: {
+      text: "Visit Store",
+      href: "https://iaquaaquatics.com",
+    },
   },
   {
     name: "Sasna Tsrer",
     description:
-      "Sasna Tsrer is a multilingual cultural celebration site focused on promoting Armenian heritage.",
+      "is a multilingual cultural showcase platform dedicated to celebrating and promoting Armenian heritage.",
     tools: ["React", "Next.js"],
     features: [
-      "Static Generation with Next.js",
-      "Lazy-Loaded Assets and Responsive Font Scaling",
-      "Modular Components with Tailwind utility Classes",
-      "Vercel Deployment",
-      "Localization-Ready Structure for Multilingual Content",
+      "Static site generation for fast performance",
+      "Lazy-loaded assets and responsive typography",
+      "Modular architecture built with Tailwind utility classes",
+      "Deployed and hosted on Vercel",
+      "Localization-ready setup for multilingual content",
     ],
-    link: { text: "Sasna Tsrer", href: "https://sasnatsrer.vercel.app/" },
+    link: {
+      text: "Explore Site",
+      href: "https://sasnatsrer.vercel.app/",
+    },
   },
   {
     name: "Techmetrica",
     description:
-      "Techmetrica is a psychology-based web platform that explores decision-making and self-reflection through interactive games.",
+      "is a psychology-driven web platform exploring decision-making, personality, and self-reflection through interactive games.",
     tools: ["React", "Next.js", "Node.js", "Express.js", "MySQL"],
-    games: ["Try Buy Goodbye", "Game of Drones", "Sensi Bot", "Folk Theories of Phones"],
+    games: [
+      "Try Buy Goodbye",
+      "Game of Drones",
+      "Sensi Bot",
+      "Folk Theories of Phones",
+    ],
     features: [
-      "Guest Login & Resume Functionality",
-      "Admin Dashboard with Game-Specific Filters",
-      "User Dashboard with Game History",
-      "Dynamic Questionnaire Forms",
-      "CSV Export and JSON Game Data Storage",
+      "Guest login with progress resume",
+      "Admin dashboard with per-game analytics and filters",
+      "User dashboard with personalized game history",
+      "Dynamic questionnaire system with multiple question types",
+      "Data export to CSV and JSON-based game result storage",
     ],
   },
   {
     name: "Binary Bros Hotel",
     description:
-      "A full-featured hotel management system designed for both guest and admin users.",
+      "is a comprehensive desktop hotel management system for both administrators and guests.",
     tools: ["Java", "JavaFX", "MySQL"],
     features: [
-      "Guest Login & Session Resume",
-      "Admin Dashboard with Filters",
-      "User Booking & History View",
-      "Dynamic Check-In & Survey Forms",
+      "Guest login and session persistence",
+      "Admin dashboard with advanced search and filtering",
+      "User-side booking and history management",
+      "Dynamic check-in process with post-stay surveys",
     ],
   },
 ];
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -179,26 +189,37 @@ const Projects = () => {
               )}
 
               {project.categories &&
-                project.categories.map((cat, i) => (
-                  <motion.div
-                    key={i}
-                    className="mb-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + i * 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <br /> 
-                    <h4 className="text-lg font-semibold text-white mb-2">
-                      {cat.title}:
-                    </h4>
-                    <ul className="space-y-1 text-white/80">
-                      {cat.items.map((item, idx) => (
-                        <li key={idx}>• {item}</li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
+              project.categories.map((cat, i) => (
+                <motion.div
+                  key={i}
+                  className="mb-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + i * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <br /> 
+                  <h4 className="text-lg font-semibold text-white mb-2">
+                    {cat.title}:
+                  </h4>
+
+                  <ul className="flex flex-wrap justify-center gap-3">
+                    {cat.items.map((item, idx) => (
+                      <motion.li
+                        key={idx}
+                        className="bg-cyan-400 text-black px-4 py-2 rounded-lg"
+                        custom={idx}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.7 + idx * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        {item}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
 
               {project.tools && (
                 <motion.div
@@ -283,12 +304,11 @@ const Projects = () => {
                         • {feature}
                       </motion.li>
                     ))}
-                    {project.name === "Two Touch" && (
-                      <li className="italic text-white/70">More Being Added!</li>
-                    )}
                   </ul>
                 </motion.div>
               )}
+
+              <br />
 
               {project.link && (
                 <motion.div

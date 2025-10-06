@@ -81,7 +81,7 @@ const Landing = () => {
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide mb-8">
-          Not to Brag, But These Are Worth a Look
+          Made by Yours Truly
         </h2>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -117,18 +117,26 @@ const Landing = () => {
         </div>
 
         <div className="mt-20">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide mb-6">
-            Currently Working on
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide mb-8">
+            Currently Being Developed
           </h2>
-          <a
-            href="https://twotouchgame.vercel.app/"
-            className="text-cyan-400 hover:text-white transition text-xl sm:text-2xl font-semibold"
+
+          <motion.div
+            className="backdrop-blur-md bg-white/5 rounded-lg inline-block px-4 py-2 shadow-md hover:bg-white/10 transition"
+            whileHover={{ scale: 1.05 }}
           >
-            Two Touch
-          </a>
+            <a
+              href="https://twotouchgame.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 text-lg sm:text-xl md:text-2xl font-semibold"
+            >
+              Two Touch
+            </a>
+          </motion.div>
 
           <div className="mt-8">
-            <span className="inline-block px-4 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-medium">
+            <span className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-base sm:text-lg md:text-xl font-medium tracking-wide">
               Coming Summer 2026
             </span>
           </div>

@@ -23,14 +23,23 @@ function App() {
         <Header />
         <Dots />
 
-        <div className="fixed top-4 right-4 z-50 md:hidden">
+        <div className="fixed top-4 left-4 z-50 md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(prev => !prev)}
-            className="relative flex flex-col justify-between w-8 h-6 p-1 text-white z-[9999]"
+            className="flex items-center justify-center w-8 h-8 p-1 text-white z-[9999]"
           >
-            <span className="block h-0.5 w-full bg-white" />
-            <span className="block h-0.5 w-full bg-white" />
-            <span className="block h-0.5 w-full bg-white" />
+            <svg
+              className="w-6 h-6"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 6H24" stroke="currentColor" strokeWidth="2" />
+              <path d="M0 12H24" stroke="currentColor" strokeWidth="2" />
+              <path d="M0 18H24" stroke="currentColor" strokeWidth="2" />
+            </svg>
           </button>
         </div>
 
