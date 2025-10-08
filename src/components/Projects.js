@@ -16,13 +16,15 @@ const projects = [
     ],
     categories: [
       {
-        title: "Supported Game Modes",
-        items: [
+        title: "Modes",
+        challenges: [
           "Penalty Shootouts",
           "Crossbar Challenges",
           "Freekicks",
           "Juggling Challenge",
           "Corners Challenge",
+        ],
+        games: [
           "1v1s",
           "3v3s",
           "5v5s",
@@ -200,37 +202,62 @@ const Projects = () => {
               )}
 
               {project.categories &&
-              project.categories.map((cat, i) => (
-                <motion.div
-                  key={i}
-                  className="mb-2"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + i * 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <br /> 
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    {cat.title}:
-                  </h4>
+                project.categories.map((cat, i) => (
+                  <motion.div
+                    key={i}
+                    className="mb-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + i * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <br />
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      {cat.title}:
+                    </h4>
 
-                  <ul className="flex flex-wrap justify-center gap-3">
-                    {cat.items.map((item, idx) => (
-                      <motion.li
-                        key={idx}
-                        className="bg-cyan-400 text-black px-4 py-2 rounded-lg"
-                        custom={idx}
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.7 + idx * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        {item}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+                    <br />
+
+                    {cat.challenges && (
+                      <ul className="flex flex-wrap justify-center gap-3 mb-4">
+                        {cat.challenges.map((item, idx) => (
+                          <motion.li
+                            key={idx}
+                            className="bg-cyan-400 text-black px-4 py-2 rounded-lg"
+                            custom={idx}
+                            initial={{ opacity: 0, y: 15 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.7 + idx * 0.1 }}
+                            viewport={{ once: true }}
+                          >
+                            {item}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {cat.challenges && cat.games && <div className="h-2" />}
+
+                    {cat.games && (
+                      <ul className="flex flex-wrap justify-center gap-3">
+                        {cat.games.map((item, idx) => (
+                          <motion.li
+                            key={idx}
+                            className="bg-cyan-400 text-black px-4 py-2 rounded-lg"
+                            custom={idx}
+                            initial={{ opacity: 0, y: 15 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.9 + idx * 0.1 }}
+                            viewport={{ once: true }}
+                          >
+                            {item}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    )}
+                  </motion.div>
+                ))}
+
 
               {project.tools && (
                 <motion.div
