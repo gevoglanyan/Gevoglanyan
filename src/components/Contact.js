@@ -19,11 +19,11 @@ const Contact = () => {
             href="https://www.instagram.com/hgevoglanyan"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:scale-110 transform transition duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-white"
+              className="h-10 w-10 text-white hover:text-cyan-400 transition"
               viewBox="0 0 496 512"
               fill="currentColor"
             >
@@ -33,13 +33,13 @@ const Contact = () => {
 
           <a 
             href="https://www.tiktok.com/@hgevoglanyan" 
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:scale-110 transform transition duration-300"
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-8 w-8 text-white"
+              className="h-10 w-10 text-white hover:text-cyan-400 transition"
               viewBox="0 0 496 512"
               fill="currentColor"
             >
@@ -48,7 +48,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <br />
+        <br /> <br />
 
         <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-6">
           <p className="text-white text-lg font-medium">
@@ -58,6 +58,8 @@ const Contact = () => {
             Don’t worry, I read all messages — even the ones without semicolons.
           </p>
         </div>
+
+        <br /> <br />
 
         {state.succeeded ? (
           <p className="text-white text-xl font-medium py-12">
@@ -109,6 +111,8 @@ const Contact = () => {
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
+
+            <br />
 
             <div className="text-center pt-5">
               <button

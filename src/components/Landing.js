@@ -135,6 +135,8 @@ const Landing = () => {
             </a>
           </motion.div>
 
+          <br /> <br />
+
           <div className="mt-8">
             <span className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-base sm:text-lg md:text-xl font-medium tracking-wide">
               Coming Summer 2026
