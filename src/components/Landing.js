@@ -126,7 +126,7 @@ const Landing = () => {
             whileHover={{ scale: 1.05 }}
           >
             <a
-              href="https://twotouchgame.vercel.app/"
+              href="https://twotouchgame.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-400 text-lg sm:text-xl md:text-2xl font-semibold"

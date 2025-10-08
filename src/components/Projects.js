@@ -21,8 +21,11 @@ const projects = [
           "Penalty Shootouts",
           "Crossbar Challenges",
           "Freekicks",
+          "Juggling Challenge",
+          "Corners Challenge",
           "1v1s",
           "3v3s",
+          "5v5s",
           "6v6s",
           "11v11s",
         ],
@@ -30,7 +33,7 @@ const projects = [
     ],
     link: {
       text: "View Project",
-      href: "https://twotouchgame.vercel.app/",
+      href: "https://twotouchgame.com",
     },
   },
   {
@@ -102,6 +105,10 @@ const projects = [
       "Dynamic questionnaire system with multiple question types",
       "Data export to CSV and JSON-based game result storage",
     ],
+    link: {
+      text: "Tour Site",
+      href: "https://techmetrica.org",
+    },
   },
   {
     name: "Binary Bros Hotel",
@@ -114,6 +121,10 @@ const projects = [
       "User-side booking and history management",
       "Dynamic check-in process with post-stay surveys",
     ],
+    link: {
+      text: "View Project",
+      href: "https://github.com/gevoglanyan/BinaryBrosHotel",
+    },
   },
 ];
 
