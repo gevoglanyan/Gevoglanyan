@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const Gaming = () => {
   return (
@@ -80,9 +81,15 @@ const Gaming = () => {
         </div>
 
         <div>
-          <span className="block text-3xl md:text-2xl font-semibold text-white text-center">
-            I will add more Gaming related information!
-          </span>
+          <motion.p
+          className="text-center text-2xl text-white font-semibold mt-24"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          More Gaming Accolades Will Be Added!
+        </motion.p>
         </div>
       </div>
     </section>

@@ -350,7 +350,7 @@ const Projects = () => {
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
         >
-          I will add more Projects!
+          More Projects Coming Soon!
         </motion.p>
       </div>
     </section>
