@@ -26,9 +26,16 @@ const Gaming = () => {
             <span className="text-white font-semibold">Destiny 2</span>.
           </p>
           <p>
-            No long list of favorite titles — just Destiny 2, and that’s enough.
+            No long list of favorite titles — just <span className="text-white font-semibold">Destiny 2</span>, and that’s enough.
+          </p>
+
+          <br /> 
+          <p>
+            Okay, I lied. I also play <span className="text-white font-semibold">Call of Duty</span>.
           </p>
         </div>
+
+        <br /> 
 
         <div className="social-icons flex justify-center space-x-10">
           <a
@@ -89,6 +96,10 @@ const Gaming = () => {
           viewport={{ once: true }}
         >
           More Gaming Accolades Will Be Added!
+          <br/> <br/>
+          Or Not. Who Knows?
+          <br/> <br/> <br/>
+          Make Sure To Check Back To See
         </motion.p>
         </div>
       </div>

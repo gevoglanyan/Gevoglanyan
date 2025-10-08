@@ -63,6 +63,8 @@ const About = () => {
           </a>
         </div>
 
+        <br /> 
+
         <div className="flex justify-center space-x-8 mt-12">
           <motion.a
             href="https://github.com/gevoglanyan"

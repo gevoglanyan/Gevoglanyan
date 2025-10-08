@@ -378,6 +378,8 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           More Projects Coming Soon!
+          <br/> <br/> <br/>
+          Make Sure To Check Back To See
         </motion.p>
       </div>
     </section>
