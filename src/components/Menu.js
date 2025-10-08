@@ -56,20 +56,19 @@ const MobileMenu = ({ onClose }) => {
 
         <footer className="relative mt-10">
           <div className="relative overflow-hidden pb-8">
-            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-white-400" />
-            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-white-400 blur-[20px]" />
+            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-cyan-400" />
+            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-cyan-400 blur-[20px]" />
           </div>
           <div className="text-4xl font-bold text-center text-white mb-6">
-            < br /> Gevoglanyan
+            <br /> Gevoglanyan
           </div>
           <section className="flex flex-col gap-4 items-center mt-8 text-sm text-white-400">
             <div> 
-              <br/>Designed & Powered
+              <br />Designed & Powered
             </div>
-            <div>
+            <div className="text-cyan-400">
               by Harutyun Gevoglanyan 
             </div>
-          
           </section>
         </footer>
       </div>
