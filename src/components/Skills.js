@@ -14,23 +14,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      items: ["JavaScript", "TypeScript", "Java", "Python", "C", "C++", "HTML", "CSS"],
+      items: ["JavaScript", "TypeScript", "Java", "Python", "C", "C++", "HTML", "CSS", "SQL"],
     },
     {
       title: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB"],
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
     },
     {
       title: "Frameworks & Libraries",
-      items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "JavaFX", "JUnit"],
+      items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "JavaFX", "JUnit", "Prisma"],
     },
     {
       title: "Developer Tools",
-      items: ["Git", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse"],
+      items: ["Git", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse", "AWS"],
     },
     {
       title: "Deployment & APIs",
-      items: ["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth"],
+      items: ["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth", "Postman"],
     },
   ];
 
