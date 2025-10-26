@@ -55,7 +55,7 @@ const About = () => {
 
         <div className="mt-12">
           <a
-            href="Resume.pdf"
+            href=""
             download
             className="inline-block backdrop-blur-md bg-white/10 text-cyan-400 font-semibold text-lg px-6 py-3 rounded-xl shadow-md hover:bg-white/20 hover:scale-105 transition"
           >
