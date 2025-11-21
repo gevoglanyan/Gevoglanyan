@@ -67,7 +67,7 @@ const MobileMenu = ({ onClose }) => {
               <br />Designed & Powered
             </div>
             <div className="text-cyan-400">
-              by Harutyun Gevoglanyan 
+              by Harry Gevoglanyan 
             </div>
           </section>
         </footer>

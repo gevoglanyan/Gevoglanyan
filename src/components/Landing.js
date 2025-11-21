@@ -48,7 +48,7 @@ const Landing = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-          Harutyun Gevoglanyan
+          Harry Gevoglanyan
         </h1>
 
         <motion.h2

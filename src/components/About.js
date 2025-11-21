@@ -30,7 +30,7 @@ const About = () => {
           <p>
             Hi, I’m{" "}
             <span className="text-white font-semibold">
-              Harutyun Gevoglanyan
+              Harry Gevoglanyan
             </span>{" "}
             — a full-stack developer from Los Angeles who’s passionate about
             building clean, scalable, and user-friendly web experiences.
