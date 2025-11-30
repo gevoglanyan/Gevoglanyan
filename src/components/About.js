@@ -59,7 +59,7 @@ const About = () => {
             download
             className="inline-block backdrop-blur-md bg-white/10 text-cyan-400 font-semibold text-lg px-6 py-3 rounded-xl shadow-md hover:bg-white/20 hover:scale-105 transition"
           >
-            Harutyun Gevoglanyan&apos;s Resume
+            Harry Gevoglanyan&apos;s Resume
           </a>
         </div>
 
