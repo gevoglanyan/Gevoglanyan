@@ -26,7 +26,7 @@ const Skills = () => {
     },
     {
       title: "Developer Tools",
-      items: ["Git", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse", "AWS"],
+      items: ["Git", "GitHub", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse", "AWS"],
     },
     {
       title: "Deployment & APIs",

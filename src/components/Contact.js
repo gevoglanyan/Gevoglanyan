@@ -118,9 +118,12 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold py-2 px-8 rounded-lg transition duration-300"
+                className="bg-cyan-500/90 text-black font-semibold
+                  px-8 py-2 rounded-xl shadow-lg
+                  hover:shadow-[0_0_20px_cyan] hover:scale-105
+                  transition"
               >
-                {state.submitting ? 'Sending...' : 'Submit Form'}
+                {state.submitting ? "Sending..." : "Submit Form"}
               </button>
             </div>
           </form>

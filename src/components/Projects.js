@@ -24,6 +24,9 @@ const projects = [
           "Juggling Challenge",
           "Corners Challenge",
         ],
+      },
+      {
+        title: "Games",
         games: [
           "1v1s",
           "3v3s",
@@ -258,6 +261,7 @@ const Projects = () => {
                   </motion.div>
                 ))}
 
+              
 
               {project.tools && (
                 <motion.div
@@ -272,6 +276,7 @@ const Projects = () => {
                   <h4 className="text-lg font-semibold text-white mb-2">
                     Tools:
                   </h4>
+                  <br />
                   <ul className="flex flex-wrap justify-center gap-3">
                     {project.tools.map((tool, idx) => (
                       <motion.li
@@ -327,6 +332,7 @@ const Projects = () => {
                   transition={{ delay: 0.6 }}
                   viewport={{ once: true }}
                 >
+                  <br />
                   <h4 className="text-lg font-semibold text-white mb-2">
                     Features:
                   </h4>

@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       {visible && (
-        <nav className="hidden md:flex fixed top-4 left-0 w-full z-50 px-6 py-3 justify-center items-center bg-black/80 backdrop-blur-md transition-opacity duration-300">
+        <nav className="hidden md:flex fixed top-8 left-0 w-full z-50 px-6 py-3 justify-center items-center bg-black/80 backdrop-blur-md transition-opacity duration-300">
           <ul className="flex justify-center items-center gap-4 text-sm md:text-base tracking-wide text-white text-center">
             {sections.map((sec, idx) => (
               <React.Fragment key={sec}>
