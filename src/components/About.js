@@ -78,15 +78,14 @@ const About = () => {
 
         <div className="mt-12">
           <button
-  onClick={() => setShowResumeNotice(true)}
-  className="inline-block bg-cyan-500/90 text-black font-semibold
-  text-lg px-6 py-3 rounded-xl shadow-lg
-  hover:shadow-[0_0_20px_cyan] hover:scale-105
-  transition"
->
-  Harry Gevoglanyan's Resume
-</button>
-
+            onClick={() => setShowResumeNotice(true)}
+            className="inline-block bg-cyan-500/90 text-black font-semibold
+            text-lg px-6 py-3 rounded-xl shadow-lg
+            hover:shadow-[0_0_20px_cyan] hover:scale-105
+            transition"
+          >
+            Harry Gevoglanyan's Resume
+          </button>
         </div>
 
         {showResumeNotice && (
@@ -117,15 +116,15 @@ const About = () => {
               <br />
 
               <p className="text-gray-300 text-lg leading-relaxed max-w-xl mx-auto">
-                To request a copy of my resume, please{" "}
+                To request a downloadable copy of my {" "}
                 <a
                   href="#contact"
                   onClick={() => setShowResumeNotice(false)}
                   className="text-cyan-400 font-semibold underline hover:text-cyan-300"
                 >
-                  reach out
+                  resume
                 </a>
-                . <br /> I’m happy to share it upon request.
+                  <br /> please reach out. I’m happy to share it upon request.
               </p>
             </motion.div>
           </motion.div>
