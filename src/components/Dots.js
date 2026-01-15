@@ -1,7 +1,7 @@
 import React from 'react';
 import Active from './Active';
 
-const sections = ['landing', 'about', 'skills', 'projects', 'gaming', 'contact'];
+const sections = ['landing', 'about', 'skills', 'client-work', 'projects', 'gaming', 'contact'];
 
 const Dots = () => {
   const active = Active();

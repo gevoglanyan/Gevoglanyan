@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const sections = ['landing', 'about', 'skills', 'projects', 'gaming', 'contact'];
+const sections = ['landing', 'about', 'skills', 'client-work', 'projects', 'gaming', 'contact'];
 
 const Active = () => {
   const [active, setActive] = useState('landing');

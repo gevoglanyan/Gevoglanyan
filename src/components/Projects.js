@@ -42,37 +42,71 @@ const projects = [
     },
   },
   {
-    name: "GMG Transportation",
+    name: "Gym Tracker Pro",
     description:
-      "is a luxury vehicle booking platform built for a private transportation company, offering a seamless, user-friendly booking experience.",
-    tools: ["React", "Next.js", "Stripe API", "Google Maps API"],
+      "is a comprehensive fitness tracking application that helps users log workouts, monitor progress, and achieve their fitness goals.",
+    tools: ["React", "Next.js", "Node.js", "Express.js", "MongoDB"],
     features: [
-      "Google Maps routing, fare estimation, and location autocomplete",
-      "Secure Stripe Checkout integration for online payments",
-      "Dynamic multi-step booking flow with real-time price updates",
-      "Filterable vehicle carousels with responsive design",
-      "SEO-optimized, fully deployed, and mobile-first experience",
+      "Customizable workout routines and exercise libraries",
+      "Progress tracking with visual charts and statistics",
+      "Personal record (PR) tracking across all exercises",
+      "Workout history with detailed session logs",
+      "User authentication and personalized dashboards",
     ],
     link: {
-      text: "Visit Website",
-      href: "https://gmgtransportation.com",
+      text: "View Project",
+      href: "https://github.com/gevoglanyan/GymTracker",
     },
   },
   {
-    name: "iAqua Aquatics",
+    name: "Zavala - Dicord LLM Bot",
     description:
-      "is an online store designed for aquarium enthusiasts, featuring a clean, modern shopping experience.",
-    tools: ["React", "Next.js", "PayPal API"],
+      "is an AI-powered Discord bot that brings intelligent conversation and assistance to Discord servers using advanced language models.",
+    tools: ["Python", "Discord.py", "OpenAI API", "LangChain"],
     features: [
-      "Category-based product filtering (e.g., Betta, Sword Plants)",
-      "Persistent cart powered by localStorage and React state",
-      "Integrated PayPal Checkout for secure transactions",
-      "Fully responsive and accessibility-optimized layout",
-      "Minimal, modern UI design with smooth user interactions",
+      "Natural language conversation with context awareness",
+      "Multi-server support with per-server configurations",
+      "Command-based interactions and slash command support",
+      "Customizable personality and response styles",
+      "Message history tracking for contextual responses",
     ],
     link: {
-      text: "Visit Store",
-      href: "https://iaquaaquatics.com",
+      text: "View Project",
+      href: "https://github.com/gevoglanyan/Zavala",
+    },
+  },
+  {
+    name: "Better Spotify - Discord Music Bot",
+    description:
+      "is a feature-rich Discord music bot that brings high-quality music playback and playlist management to Discord servers.",
+    tools: ["Node.js", "Discord.js", "YouTube API", "FFmpeg"],
+    features: [
+      "Play music from YouTube with search functionality",
+      "Queue management with skip, pause, and resume controls",
+      "Playlist support with save and load capabilities",
+      "Volume control and audio filters",
+      "Now playing display with song information",
+    ],
+    link: {
+      text: "View Project",
+      href: "https://github.com/gevoglanyan/BetterSpotify",
+    },
+  },
+  {
+    name: "Echo - Mock Conversation",
+    description:
+      "is a web application that generates realistic mock conversations between two people across various popular messaging platforms.",
+    tools: ["React", "Next.js", "Tailwind CSS"],
+    features: [
+      "Multiple platform interfaces (iMessage, WhatsApp, Instagram, Twitter/X)",
+      "Customizable sender and recipient names",
+      "Real-time conversation builder with timestamps",
+      "Export conversations as images",
+      "Responsive design matching authentic platform aesthetics",
+    ],
+    link: {
+      text: "View Project",
+      href: "https://github.com/gevoglanyan/Echo",
     },
   },
   {
@@ -90,29 +124,6 @@ const projects = [
     link: {
       text: "Explore Site",
       href: "https://sasnatsrer.vercel.app/",
-    },
-  },
-  {
-    name: "Techmetrica",
-    description:
-      "is a psychology-driven web platform exploring decision-making, personality, and self-reflection through interactive games.",
-    tools: ["React", "Next.js", "Node.js", "Express.js", "MySQL"],
-    games: [
-      "Try Buy Goodbye",
-      "Game of Drones",
-      "Sensi Bot",
-      "Folk Theories of Phones",
-    ],
-    features: [
-      "Guest login with progress resume",
-      "Admin dashboard with per-game analytics and filters",
-      "User dashboard with personalized game history",
-      "Dynamic questionnaire system with multiple question types",
-      "Data export to CSV and JSON-based game result storage",
-    ],
-    link: {
-      text: "Tour Site",
-      href: "https://techmetrica.org",
     },
   },
   {
@@ -289,35 +300,6 @@ const Projects = () => {
                         viewport={{ once: true }}
                       >
                         {tool}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-
-              {project.games && (
-                <motion.div
-                  className="mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    Games:
-                  </h4>
-                  <ul className="flex flex-wrap justify-center gap-4">
-                    {project.games.map((game, idx) => (
-                      <motion.li
-                        key={idx}
-                        className="bg-cyan-400 text-black px-4 py-2 rounded-lg"
-                        custom={idx}
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.7 + idx * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        {game}
                       </motion.li>
                     ))}
                   </ul>
