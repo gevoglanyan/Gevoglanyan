@@ -4,7 +4,6 @@ const sections = [
   { id: 'landing', label: 'LANDING' },
   { id: 'about', label: 'ABOUT' },
   { id: 'skills', label: 'SKILLS' },
-  { id: 'client-work', label: 'CLIENT WORK' },
   { id: 'projects', label: 'PROJECTS' },
   { id: 'gaming', label: 'GAMING' },
   { id: 'contact', label: 'CONTACT' },

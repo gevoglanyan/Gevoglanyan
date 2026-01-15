@@ -114,6 +114,22 @@ const Landing = () => {
               GMG Transportation
             </a>
           </motion.div>
+
+          <span className="text-white text-xl font-semibold">&</span>
+
+          <motion.div
+            className="backdrop-blur-md bg-white/5 rounded-xl px-6 py-4 shadow-lg hover:bg-white/10 transition"
+            whileHover={{ scale: 1.05 }}
+          >
+            <a
+              href="https://fiorifinticupcakes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 text-lg sm:text-xl md:text-2xl font-semibold"
+            >
+              Fiori Finti Cupcakes
+            </a>
+          </motion.div>
         </div>
 
         <div className="mt-20">

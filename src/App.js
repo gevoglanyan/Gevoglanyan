@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Landing from './components/Landing';
 import About from './components/About';
 import Skills from './components/Skills';
-import ClientWork from './components/ClientWork';
 import Projects from './components/Projects';
 import Gaming from './components/Gaming';
 import Contact from './components/Contact';
@@ -50,7 +49,6 @@ function App() {
           <Landing />
           <About />
           <Skills />
-          <ClientWork />
           <Projects />
           <Gaming />
           <Contact />

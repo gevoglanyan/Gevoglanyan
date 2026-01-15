@@ -37,7 +37,7 @@ const clientProjects = [
     },
   },
   {
-    name: "Fiori Finti",
+    name: "Fiori Finti Cupcakes",
     description:
       "is an elegant e-commerce platform specializing in premium artificial flowers and floral arrangements.",
     tools: ["React", "Next.js", "Stripe API"],
@@ -50,7 +50,7 @@ const clientProjects = [
     ],
     link: {
       text: "Visit Store",
-      href: "https://fiorifinti.com",
+      href: "https://fiorifinticupcakes.com"
     },
   },
   {
