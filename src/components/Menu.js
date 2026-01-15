@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const sections = [
   { id: 'landing', label: 'LANDING' },
   { id: 'about', label: 'ABOUT' },
   { id: 'skills', label: 'SKILLS' },
+  { id: 'client-work', label: 'CLIENT WORK' },
   { id: 'projects', label: 'PROJECTS' },
   { id: 'gaming', label: 'GAMING' },
   { id: 'contact', label: 'CONTACT' },
 ];
 
 const MobileMenu = ({ onClose }) => {
-
   useEffect(() => {
     document.body.classList.add('overflow-hidden');
 
@@ -29,50 +30,86 @@ const MobileMenu = ({ onClose }) => {
     });
   };
 
-  return (
-    <aside className="md:hidden fixed inset-0 z-40 bg-black px-6 pt-[1vh] overflow-y-auto">
-      <div className="flex flex-col min-h-screen w-full">
-        <div className="relative w-fit mx-auto">
+  const menuVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { duration: 0.3 }
+    }
+  };
 
-          < br /> < br /> < br /> < br />
-          
-          <ul className="flex flex-col gap-6 uppercase text-2xl text-white">
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+      }
+    })
+  };
+
+  return (
+    <motion.aside
+      className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl"
+      variants={menuVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
+      <div className="flex flex-col min-h-screen w-full px-8 py-20">
+        <motion.button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition flex items-center justify-center group"
+          initial={{ opacity: 0, rotate: -90 }}
+          animate={{ opacity: 1, rotate: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <svg
+            className="w-6 h-6 text-cyan-400 group-hover:text-white transition"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </motion.button>
+
+        <nav className="flex-1 flex flex-col justify-center">
+          <ul className="space-y-6">
             {sections.map((section, idx) => (
-              <li key={section.id}>
+              <motion.li
+                key={section.id}
+                custom={idx}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <button
                   onClick={() => handleLinkClick(section.id)}
-                  className="flex gap-2 items-center"
+                  className="group flex items-center gap-4 w-full text-left"
                 >
-                  <span>{section.label}</span>
+                  <motion.span
+                    className="w-2 h-2 rounded-full bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                    whileHover={{ scale: 1.5 }}
+                  />
+                  
+                  <span className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-wide">
+                    {section.label}
+                  </span>
                 </button>
-              </li>
+              </motion.li>
             ))}
           </ul>
-
-          <div className="absolute right-0 top-0 aspect-square h-full w-2 bg-cyan-400 blur-[50px]" />
-        </div>
-
-        < br /> < br /> 
-
-        <footer className="relative mt-10">
-          <div className="relative overflow-hidden pb-8">
-            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-cyan-400" />
-            <hr className="absolute left-[-10%] h-2 w-[200vw] bg-cyan-400 blur-[20px]" />
-          </div>
-          <div className="text-4xl font-bold text-center text-white mb-6">
-            <br /> Gevoglanyan
-          </div>
-          <section className="flex flex-col gap-4 items-center mt-8 text-sm text-white-400">
-            <div> 
-              <br />Designed & Powered
-            </div>
-            <div className="text-cyan-400">
-              by Harry Gevoglanyan 
-            </div>
-          </section>
-        </footer>
+        </nav>
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 
