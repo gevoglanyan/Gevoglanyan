@@ -37,9 +37,12 @@ const projects = [
       },
     ],
     link: {
-      text: "View Project",
+      text: "Explore Website",
       href: "https://twotouchgame.com",
+      text2: "View Project",
+      href2: "https://github.com/yourusername/two-touch",
     },
+    
   },
   {
     name: "Gym Tracker Pro",
@@ -53,9 +56,11 @@ const projects = [
       "Workout history with detailed session logs",
       "User authentication and personalized dashboards",
     ],
-    link: {
-      text: "View Project",
-      href: "https://github.com/gevoglanyan/GymTracker",
+    link: { 
+      text: "Explore Website",
+      href: "https://gym-tracker-ten-nu.vercel.app/",
+      text2: "View Project",
+      href2: "https://github.com/gevoglanyan/GymTracker",
     },
   },
   {
@@ -105,8 +110,10 @@ const projects = [
       "Responsive design matching authentic platform aesthetics",
     ],
     link: {
-      text: "View Project",
-      href: "https://github.com/gevoglanyan/Echo",
+      text: "Explore Website",
+      href: "https://echo-zeta-jet.vercel.app/",
+      text2: "View Project",
+      href2: "https://github.com/gevoglanyan/Echo",
     },
   },
   {
@@ -338,7 +345,7 @@ const Projects = () => {
 
               {project.link && (
                 <motion.div
-                  className="text-xl font-semibold mt-4"
+                  className="flex flex-wrap justify-center gap-4 text-xl font-semibold mt-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 1 }}
@@ -352,6 +359,19 @@ const Projects = () => {
                   >
                     {project.link.text}
                   </a>
+                  {project.link.text2 && project.link.href2 && (
+                    <>
+                      <span className="text-white/50">|</span>
+                      <a
+                        href={project.link.href2}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-400 hover:text-white transition"
+                      >
+                        {project.link.text2}
+                      </a>
+                    </>
+                  )}
                 </motion.div>
               )}
             </motion.div>

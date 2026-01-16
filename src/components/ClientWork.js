@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const clientProjects = [
   {
-    name: "GMG Transportation",
+    name: "GMG Transportation, Inc",
     description:
       "is a luxury vehicle booking platform built for a private transportation company, offering a seamless, user-friendly booking experience.",
     tools: ["React", "Next.js", "Stripe API", "Google Maps API"],
