@@ -76,7 +76,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 required
-                placeholder="Harutyun Gevoglanyan"
+                placeholder="Harry Gevoglanyan"
                 className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
               <ValidationError prefix="Name" field="name" errors={state.errors} />
