@@ -91,7 +91,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 required
-                placeholder="gevoglanyan.harutyun@gmail.com"
+                placeholder="info@gevoglanyan.com"
                 className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               />
               <ValidationError prefix="Email" field="email" errors={state.errors} />
