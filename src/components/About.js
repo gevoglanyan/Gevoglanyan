@@ -7,6 +7,15 @@ const About = () => {
   useEffect(() => {
     if (showResumeNotice) {
       document.body.style.overflow = "hidden";
+      
+      // Center the about section when modal opens
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ 
+          behavior: "smooth", 
+          block: "center" 
+        });
+      }
     } else {
       document.body.style.overflow = "";
     }
@@ -33,27 +42,23 @@ const About = () => {
         </h2>
 
         <motion.img
-          src="/pictures/Harut.png"
+          src="/pictures/Harut.PNG"
           alt="Harut"
-          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-cyan-400 mx-auto shadow-lg object-cover mb-12"
+          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover mb-12"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 200 }}
-          onError={(e) => {
-            console.error("Image failed to load:", e.target.src);
-            e.target.src = "https://via.placeholder.com/192";
-          }}
         />
 
         <div className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed space-y-6">
           <p>
-            Hi — I’m{" "}
+            Hi — I'm{" "}
             <span className="text-white font-semibold">
               Harry Gevoglanyan
             </span>
             , a full-stack developer from Los Angeles who enjoys designing clean,
             intuitive, and thoughtfully-built web experiences. I love working across
             the stack — from front-end interaction and animation to back-end
-            architecture and database design — and I’m always exploring new ways to
+            architecture and database design — and I'm always exploring new ways to
             blend aesthetics with functionality.
           </p>
 
@@ -64,7 +69,7 @@ const About = () => {
             </span>
             , along with database experience in{" "}
             <span className="text-white font-semibold">MySQL</span> and{" "}
-            <span className="text-white font-semibold">MongoDB</span>. I’ve built
+            <span className="text-white font-semibold">MongoDB</span>. I've built
             projects ranging from interactive applications to business and
             e-commerce platforms, with a focus on usability, performance, and
             maintainable code.
@@ -73,7 +78,7 @@ const About = () => {
           <p>
             Outside of development, I enjoy{" "}
             <span className="text-white font-semibold">gaming</span>, experimenting
-            with creative side projects, and exploring new technologies — and I’m
+            with creative side projects, and exploring new technologies — and I'm
             always open to collaborating or chatting about interesting ideas.
           </p>
         </div>
@@ -120,15 +125,18 @@ const About = () => {
               <br />
 
               <p className="text-gray-300 text-lg leading-relaxed max-w-xl mx-auto">
-                To request a downloadable copy of my {" "}
+                To request a downloadable copy of my please reach out. <br /> I'm happy to share it upon request.
+
+                {" "}
+
+                <br /> <br />
                 <a
                   href="#contact"
                   onClick={() => setShowResumeNotice(false)}
-                  className="text-cyan-400 font-semibold underline hover:text-cyan-300"
+                  className="text-cyan-400 font-semibold hover:text-cyan-300"
                 >
-                  resume
+                 Harry Gevoglanyan's Resume
                 </a>
-                  <br /> please reach out. I’m happy to share it upon request.
               </p>
             </motion.div>
           </motion.div>
