@@ -7,8 +7,7 @@ const About = () => {
   useEffect(() => {
     if (showResumeNotice) {
       document.body.style.overflow = "hidden";
-      
-      // Center the about section when modal opens
+    
       const aboutSection = document.getElementById("about");
       if (aboutSection) {
         aboutSection.scrollIntoView({ 
