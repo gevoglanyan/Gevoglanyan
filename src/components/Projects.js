@@ -64,6 +64,24 @@ const projects = [
     },
   },
   {
+    name: "Tarkov Quest Tracker",
+    description:
+      "is a comprehensive quest tracking tool for Escape from Tarkov that helps players manage and complete in-game quests efficiently.",
+    tools: ["React", "Next.js", "Tailwind CSS"],
+    features: [
+      "Complete quest database with objectives and rewards",
+      "Progress tracking with save/load functionality",
+      "Filter quests by trader, map, and completion status",
+      "Quest dependencies and unlock requirements visualization",
+    ],
+    link: {
+      text: "Explore Website",
+      href: "https://tarkov-quest-tracker.vercel.app/",
+      text2: "View Project",
+      href2: "https://github.com/gevoglanyan/TarkovTracker",
+    },
+  },
+  {
     name: "Zavala - Dicord LLM Bot",
     description:
       "is an AI-powered Discord bot that brings intelligent conversation and assistance to Discord servers using advanced language models.",
