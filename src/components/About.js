@@ -33,7 +33,7 @@ const About = () => {
         </h2>
 
         <motion.img
-          src="/pictures/Harut.JPG"
+          src="/pictures/Harut.PNG"
           alt="Harut"
           className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover mb-12"
           whileHover={{ scale: 1.05 }}
