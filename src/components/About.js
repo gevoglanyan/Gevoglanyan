@@ -33,11 +33,15 @@ const About = () => {
         </h2>
 
         <motion.img
-          src="/pictures/Harut.PNG"
+          src="/pictures/Harut.png"
           alt="Harut"
-          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-black mx-auto shadow-lg object-cover mb-12"
+          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-cyan-400 mx-auto shadow-lg object-cover mb-12"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 200 }}
+          onError={(e) => {
+            console.error("Image failed to load:", e.target.src);
+            e.target.src = "https://via.placeholder.com/192";
+          }}
         />
 
         <div className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed space-y-6">
