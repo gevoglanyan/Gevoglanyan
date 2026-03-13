@@ -48,7 +48,7 @@ function App() {
 
         {isMobileMenuOpen && <Menu onClose={() => setIsMobileMenuOpen(false)} />}
 
-        <main className="pt-20 md:pt-0">
+        <main className="pt-20 md:pt-16 lg:pt-0">
           <Landing />
           <About />
           <Skills />
