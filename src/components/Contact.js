@@ -28,10 +28,28 @@ const Contact = () => {
               <span className="text-white/20">Talk</span>
             </h2>
 
+            <br /> <br />
+
             <p className="text-white/90 text-base leading-relaxed max-w-sm mb-12">
               Have a project in mind? Want to collaborate? Or just want to say hello?
               Drop a message — I read everything, even the ones without semicolons.
             </p>
+
+            <p className="text-white/90 text-base leading-relaxed max-w-sm mb-12">
+              Have a project in mind? Want to collaborate? Or just want to say hello?
+              Drop a message — I read everything, even the ones without semicolons.
+            </p>
+
+            <p className="text-white/90 text-base leading-relaxed max-w-sm mb-12">
+              Have a project in mind? Want to collaborate? Or just want to say hello?
+              Drop a message — I read everything, even the ones without semicolons.
+            </p>
+
+            <p className="text-white/90 text-base leading-relaxed max-w-sm mb-12">
+              LOL
+            </p>
+
+            <br /> <br />
 
             <div className="space-y-4">
               <p className="text-white/90 text-xs tracking-[0.2em] uppercase">Find me on</p>
@@ -61,7 +79,7 @@ const Contact = () => {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/30 hover:text-white transition-colors duration-200"
+                    className="text-white/50 hover:text-white transition-colors duration-200"
                     aria-label={s.label}
                   >
                     {s.icon}
@@ -83,52 +101,66 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
-                {[
-                  { id: "name", label: "Your Name", type: "text", placeholder: "Harry Gevoglanyan", prefix: "Name", field: "name" },
-                  { id: "email", label: "Email Address", type: "email", placeholder: "harry@gevoglanyan.com", prefix: "Email", field: "email" },
-                ].map((input) => (
-                  <div key={input.id} className="space-y-2">
-                    <label htmlFor={input.id} className="block text-white/90 text-xs tracking-[0.2em] uppercase">
-                      {input.label}
+              <>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  {[
+                    { id: "name", label: "Your Name", type: "text", placeholder: "Harry Gevoglanyan", prefix: "Name", field: "name" },
+                    { id: "email", label: "Email Address", type: "email", placeholder: "harry@gevoglanyan.com", prefix: "Email", field: "email" },
+                  ].map((input) => (
+                    <div key={input.id} className="space-y-2">
+                      <label htmlFor={input.id} className="block text-white/90 text-xs tracking-[0.2em] uppercase">
+                        {input.label}
+                      </label>
+                      <input
+                        id={input.id}
+                        type={input.type}
+                        name={input.field}
+                        required
+                        placeholder={input.placeholder}
+                        className="w-full bg-transparent border-b border-white/20 focus:border-cyan-400 text-white placeholder-white/35 py-3 text-sm outline-none transition-colors duration-200"
+                      />
+                      <ValidationError prefix={input.prefix} field={input.field} errors={state.errors} className="text-red-400 text-xs" />
+                    </div>
+                  ))}
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="block text-white/90 text-xs tracking-[0.2em] uppercase">
+                      Message
                     </label>
-                    <input
-                      id={input.id}
-                      type={input.type}
-                      name={input.field}
+                    <textarea
+                      id="message"
+                      name="message"
                       required
-                      placeholder={input.placeholder}
-                      className="w-full bg-transparent border-b border-white/20 focus:border-cyan-400 text-white placeholder-white/35 py-3 text-sm outline-none transition-colors duration-200"
+                      rows="1"
+                      placeholder="Write your message like it's your best commit message."
+                      className="w-full bg-transparent border-b border-white/20 focus:border-cyan-400 text-white placeholder-white/35 py-3 text-sm outline-none transition-colors duration-200 resize-none"
                     />
-                    <ValidationError prefix={input.prefix} field={input.field} errors={state.errors} className="text-red-400 text-xs" />
+                    <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-xs" />
                   </div>
-                ))}
 
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-white/90 text-xs tracking-[0.2em] uppercase">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows="1"
-                    placeholder="Write your message like it's your best commit message."
-                    className="w-full bg-transparent border-b border-white/20 focus:border-cyan-400 text-white placeholder-white/35 py-3 text-sm outline-none transition-colors duration-200 resize-none"
-                  />
-                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-xs" />
-                </div>
+                  <div className="pt-4">
+                    <button
+                      type="submit"
+                      disabled={state.submitting}
+                      className="group relative px-8 py-3 bg-cyan-400 text-black text-xs font-bold tracking-[0.15em] uppercase hover:bg-white transition-colors duration-300 disabled:opacity-40"
+                    >
+                      {state.submitting ? "Sending..." : "Send Message"}
+                    </button>
+                  </div>
+                </form>
 
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    disabled={state.submitting}
-                    className="group relative px-8 py-3 bg-cyan-400 text-black text-xs font-bold tracking-[0.15em] uppercase hover:bg-white transition-colors duration-300 disabled:opacity-40"
-                  >
-                    {state.submitting ? "Sending..." : "Send Message"}
-                  </button>
+                <br /> <br />
+
+                <div className="mt-12 flex justify-left">
+                  <div className="relative">
+                    <img
+                      src="/pictures/Nadeshot.jpeg"
+                      alt="Nadeshot"
+                      className="w-48 h-48 md:w-64 md:h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
                 </div>
-              </form>
+              </>
             )}
           </div>
         </div>

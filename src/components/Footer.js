@@ -13,10 +13,11 @@ const Footer = () => {
         <p className="text-white/90 text-xs tracking-[0.15em]">
           © {new Date().getFullYear()} Gevoglanyan. All Rights Reserved.
         </p>
+        
         <a
           href="#landing"
           className="text-white/90 hover:text-white text-xs tracking-[0.15em] uppercase transition-colors duration-200"
-        >
+        > <br />
           Back to top ↑
         </a>
       </div>

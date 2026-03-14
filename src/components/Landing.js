@@ -5,7 +5,7 @@ const titles = [
   "FULL STACK DEVELOPER",
   "WEB DEVELOPER",
   "GAMER",
-  "UNEMPLOYED",
+  "EMPLOYED",
 ];
 
 const Landing = () => {
@@ -98,7 +98,7 @@ const Landing = () => {
         </div>
 
         <p className="text-white/90 text-base md:text-lg max-w-md leading-relaxed mb-14 font-light">
-          Full-stack developer from Los Angeles. Building clean, fast, and 
+          Full Stack Developer from Los Angeles. Building clean, fast, and 
           purposeful web experiences across the entire stack.
         </p>
 
@@ -118,6 +118,9 @@ const Landing = () => {
         </div>
 
         <div className="border-t border-white/90 pt-8">
+      
+          <br /> 
+
           <p className="text-white/90 text-xs tracking-[0.2em] uppercase mb-5">
             Selected Work
           </p>
@@ -133,7 +136,7 @@ const Landing = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-white/40 text-sm hover:text-white transition-colors duration-200"
+                className="group flex items-center gap-2 text-white/50 text-sm hover:text-white transition-colors duration-200"
               >
                 {item.label}
                 {item.badge && (

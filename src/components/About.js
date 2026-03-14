@@ -48,7 +48,7 @@ const About = () => {
               href="https://www.linkedin.com/in/hgevoglanyan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/30 hover:text-white transition-colors duration-200"
+              className="text-white/50 hover:text-white transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" viewBox="0 0 496 512" fill="currentColor">
@@ -56,6 +56,8 @@ const About = () => {
               </svg>
             </a>
           </div>
+
+          <br />
 
           <button
             onClick={() => setShowResume(true)}
@@ -70,28 +72,27 @@ const About = () => {
             className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tighter text-white"
             style={{ fontFamily: "'Bebas Neue', 'Arial Black', sans-serif" }}
           >
-            Los Angeles–based
+            Los Angeles–Based
             <br />
-            <span className="text-white/20">Full-Stack Dev</span>
+            <span className="text-white/20">Full Stack Developer</span>
           </h2>
 
           <div className="space-y-5 text-white/90 text-base leading-relaxed font-light max-w-xl">
             <p>
-              I'm <span className="text-white font-medium">Harry Gevoglanyan</span> — a full-stack developer who builds
-              clean, thoughtful web experiences. I work across the entire stack: from interaction
-              design and animation to backend architecture and database work.
+              I'm <span className="text-white font-medium">Harry Gevoglanyan</span>, a full-stack developer who enjoys building clean, reliable web experiences. I work across the whole stack—from designing intuitive front-end interfaces to building backend systems and working with databases.
             </p>
+
             <p>
-              My toolkit centers on{" "}
-              <span className="text-white/80">React, Next.js, Node.js, and Express</span>, backed by
-              experience with <span className="text-white/80">MySQL</span> and{" "}
-              <span className="text-white/80">MongoDB</span>. I've shipped projects ranging from
-              e-commerce platforms to research tools, always with a focus on usability and code that
-              lasts.
+              My main stack includes <span className="text-white/80">React, Next.js, Node.js, and Express</span>, with
+              experience in <span className="text-white/80">JavaScript, TypeScript, Java, and Python</span>. I’ve worked with
+              databases like <span className="text-white/80">MySQL, PostgreSQL, and MongoDB</span>, and use tools such as
+              <span className="text-white/80"> Git, Docker, AWS, and Figma</span> throughout development and deployment.
             </p>
+
             <p>
-              Outside work: <span className="text-white/80">Destiny 2</span>, creative side projects,
-              and the endless scroll through new tech.
+              I’ve built projects ranging from e-commerce platforms to research tools, often integrating APIs
+              like <span className="text-white/80">Stripe, PayPal, and Google Maps</span>. My focus is always on
+              usability, performance, and writing code that’s built to last.
             </p>
           </div>
         </div>
@@ -118,7 +119,7 @@ const About = () => {
             <h3 className="text-white text-2xl font-bold mb-4 tracking-tight">
               Available Upon Request
             </h3>
-            <p className="text-white/40 text-sm leading-relaxed mb-6">
+            <p className="text-white/90 text-sm leading-relaxed mb-6">
               I'm happy to share a copy of my resume. Reach out via the contact section
               and I'll send it over.
             </p>

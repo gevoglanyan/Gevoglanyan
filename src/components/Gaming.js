@@ -25,23 +25,30 @@ const Gaming = () => {
               <span className="text-white/20">FPS</span>
             </h2>
 
+            <br />
+
             <div className="space-y-4 text-white/90 text-base leading-relaxed font-light max-w-lg mb-12">
               <p>
                 I don't play a lot of different games. Just one consistently:{" "}
-                <span className="text-white font-medium">Destiny 2</span>.
+                <span className="text-cyan-400 font-bold">Destiny 2</span>.
               </p>
+
               <p>
                 No long list of favorites — just Destiny 2, and that's enough.
               </p>
+
               <br />
+
               <p>
                 Okay, I lied. I also play{" "}
-                <span className="text-white font-medium">Call of Duty</span>.
+                <span className="text-red-500 font-bold">Call of Duty</span> from time to time.
               </p>
+
               <br />
+
               <p>
-                Oh, and this new game{" "}
-                <span className="text-white font-medium">Marathon</span>.
+                Oh, and also this new game{" "}
+                <span className="text-green-500 font-bold">Marathon</span>.
               </p>
             </div>
 
@@ -83,7 +90,7 @@ const Gaming = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-2 text-white/30 ${social.hoverColor || "hover:text-white"} transition-colors duration-200 text-sm`}
+                  className={`flex items-center gap-2 text-white/50 ${social.hoverColor || "hover:text-white"} transition-colors duration-200 text-sm`}
                 >
                   {social.icon}
                   <span className="text-xs tracking-[0.1em] uppercase">{social.label}</span>
@@ -92,7 +99,7 @@ const Gaming = () => {
             </div>
           </div>
 
-          <div className="flex justify-start lg:justify-end">
+          <div className="flex flex-col items-start lg:items-end gap-6">
             <div className="relative">
               <img
                 src="/pictures/Harold.jpg"
@@ -100,10 +107,20 @@ const Gaming = () => {
                 className="w-48 h-48 md:w-64 md:h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
+
+            <br /> <br />
+
+            <div className="relative">
+              <img
+                src="/pictures/Titan.jpg"
+                alt="Titan"
+                className="w-48 h-48 md:w-64 md:h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
           </div>
         </div>
 
-        <br />
+        <br /> <br />
 
         <div className="mt-20 border-t border-white/[0.06] pt-8">
           <p className="text-white/90 text-xs tracking-[0.2em] uppercase">

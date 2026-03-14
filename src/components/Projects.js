@@ -28,7 +28,7 @@ const projects = [
   {
     name: "Gym Tracker Pro",
     index: "02",
-    tag: "Fitness",
+    tag: "Fitness Web App",
     description:
       "A comprehensive fitness tracking app for logging workouts, monitoring progress, and tracking personal records.",
     tools: ["React", "Next.js", "Node.js", "Express.js", "MongoDB"],
