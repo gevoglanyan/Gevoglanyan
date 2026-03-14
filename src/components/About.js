@@ -79,7 +79,7 @@ const About = () => {
 
           <div className="space-y-5 text-white/90 text-base leading-relaxed font-light max-w-xl">
             <p>
-              I'm <span className="text-white font-medium">Harry Gevoglanyan</span>, a full-stack developer who enjoys building clean, reliable web experiences. I work across the whole stack—from designing intuitive front-end interfaces to building backend systems and working with databases.
+              I'm <span className="text-white font-medium">Harry Gevoglanyan</span>, a full stack developer who enjoys building clean, reliable web experiences. I work across the whole stack—from designing intuitive front end interfaces to building backend systems and working with databases.
             </p>
 
             <p>
