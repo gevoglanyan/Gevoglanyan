@@ -1,78 +1,85 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.05, duration: 0.4 },
-  }),
-};
+const skillCategories = [
+  {
+    title: "Languages",
+    items: ["JavaScript", "TypeScript", "Java", "Python", "C", "C++", "HTML", "CSS", "SQL"],
+  },
+  {
+    title: "Databases",
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
+  },
+  {
+    title: "Frameworks & Libraries",
+    items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "JavaFX", "JUnit", "Prisma"],
+  },
+  {
+    title: "Developer Tools",
+    items: ["Git", "GitHub", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse", "AWS"],
+  },
+  {
+    title: "Deployment & APIs",
+    items: ["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth", "Postman"],
+  },
+];
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Languages",
-      items: ["JavaScript", "TypeScript", "Java", "Python", "C", "C++", "HTML", "CSS", "SQL"],
-    },
-    {
-      title: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
-    },
-    {
-      title: "Frameworks & Libraries",
-      items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "JavaFX", "JUnit", "Prisma"],
-    },
-    {
-      title: "Developer Tools",
-      items: ["Git", "GitHub", "Docker", "Figma", "Jira", "VS Code", "IntelliJ", "Visual Studio", "Eclipse", "AWS"],
-    },
-    {
-      title: "Deployment & APIs",
-      items: ["Netlify", "Vercel", "Stripe API", "PayPal API", "Google Maps API", "Google Auth", "Postman"],
-    },
-  ];
-
   return (
     <section
       id="skills"
-      className="flex flex-col justify-start items-center px-6 md:px-12 lg:px-24 py-20 text-center relative bg-black"
+      className="relative py-28 px-8 md:px-16 lg:px-24 bg-[#060606]"
     >
-      <motion.div
-        className="max-w-5xl w-full z-10"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-          SKILLS
-        </h2>
-
-        <div className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto space-y-16">
-          {skillCategories.map((category, idx) => (
-            <div key={idx}>
-              <h3 className="text-2xl font-semibold text-white mb-6">{category.title}</h3>
-              <ul className="flex flex-wrap justify-center gap-4 text-base">
-                {category.items.map((item, i) => (
-                  <motion.li
-                    key={item}
-                    className="px-5 py-2 rounded-full bg-cyan-400 text-black font-medium shadow-md hover:scale-110 hover:shadow-lg transition-all"
-                    custom={i}
-                    variants={fadeInUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                  >
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-16">
+          <div className="w-8 h-px bg-cyan-400" />
+          <span className="text-cyan-400 text-xs tracking-[0.3em] font-medium uppercase">
+            Skills
+          </span>
         </div>
-      </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-12 lg:gap-24 items-start">
+          <div className="lg:sticky lg:top-24">
+            <h2
+              className="text-[clamp(2.5rem,5vw,4.5rem)] font-black leading-none tracking-tighter text-white mb-6"
+              style={{ fontFamily: "'Bebas Neue', 'Arial Black', sans-serif" }}
+            >
+              Tech
+              <br />
+              <span className="text-white/20">Stack</span>
+            </h2>
+            <p className="text-white/90 text-sm leading-relaxed">
+              Tools and Technologies I work with regularly.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {skillCategories.map((cat, idx) => (
+              <div
+                key={idx}
+                className="border-t border-white/[0.06] pt-8 grid grid-cols-[120px_1fr] gap-6 items-start"
+              >
+                <p className="text-white/90 text-xs tracking-[0.15em] uppercase font-medium pt-1">
+                  {cat.title}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-sm text-white/60 border border-white/10 px-3 py-1.5 hover:border-cyan-400/50 hover:text-white transition-all duration-200 cursor-default"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      `}</style>
     </section>
   );
 };

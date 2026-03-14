@@ -1,83 +1,65 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const Trail = () => {
   const canvasRef = useRef(null);
-  const isDragging = useRef(false);
+  const mouse = useRef({ x: -100, y: -100 });
   const points = useRef([]);
+  const animId = useRef(null);
 
   useEffect(() => {
-    if (window.innerWidth < 768) return;
-  
+    if (window.innerWidth < 1024) return;
+
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-  
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  
-    const handleResize = () => {
+    const ctx = canvas.getContext("2d");
+
+    const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-  
-    window.addEventListener('resize', handleResize);
-  
-    const handleMouseDown = () => {
-      isDragging.current = true;
-      document.body.classList.add('dragging-disable-selection');
-    };
-  
-    const handleMouseUp = () => {
-      isDragging.current = false;
-      document.body.classList.remove('dragging-disable-selection');
-    };
-  
-    const handleMouseMove = (e) => {
-      if (!isDragging.current) return;
+    resize();
+    window.addEventListener("resize", resize);
+
+    const onMove = (e) => {
+      mouse.current = { x: e.clientX, y: e.clientY };
       points.current.push({
         x: e.clientX,
         y: e.clientY,
-        alpha: 1,
+        alpha: 0.4,
+        size: 3 + Math.random() * 2,
       });
     };
-  
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mouseup', handleMouseUp);
-    window.addEventListener('mousemove', handleMouseMove);
-  
+    window.addEventListener("mousemove", onMove);
+
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-      points.current.forEach((point) => {
+
+      points.current.forEach((p) => {
         ctx.beginPath();
-        ctx.arc(point.x, point.y, 10, 0, Math.PI * 2, false);
-        ctx.fillStyle = `rgba(255, 255, 255, ${point.alpha})`;
-        ctx.shadowColor = 'rgb(255, 255, 255)';
-        ctx.shadowBlur = 10;
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(6, 182, 212, ${p.alpha})`;
+        ctx.shadowColor = "rgba(6, 182, 212, 0.4)";
+        ctx.shadowBlur = 8;
         ctx.fill();
-  
-        point.alpha -= 0.02;
+        p.alpha -= 0.015;
+        p.size *= 0.97;
       });
-  
-      points.current = points.current.filter(p => p.alpha > 0);
-  
-      requestAnimationFrame(draw);
+
+      points.current = points.current.filter((p) => p.alpha > 0);
+      animId.current = requestAnimationFrame(draw);
     };
-  
     draw();
-  
+
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousedown', handleMouseDown);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.body.classList.remove('dragging-disable-selection');
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", onMove);
+      if (animId.current) cancelAnimationFrame(animId.current);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-10"
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-[5]"
     />
   );
 };
