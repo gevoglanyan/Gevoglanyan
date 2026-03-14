@@ -124,7 +124,7 @@ const Gaming = () => {
 
         <div className="mt-20 border-t border-white/[0.06] pt-8">
           <p className="text-white/90 text-xs tracking-[0.2em] uppercase">
-            More gaming accolades will be added. Or not. Check back.
+            More gaming accolades will be added. Or not - Check back.
           </p>
         </div>
       </div>
