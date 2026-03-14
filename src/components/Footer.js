@@ -17,7 +17,7 @@ const Footer = () => {
         <a
           href="#landing"
           className="text-white/90 hover:text-white text-xs tracking-[0.15em] uppercase transition-colors duration-200"
-        > <br />
+        >
           Back to top ↑
         </a>
       </div>

@@ -128,7 +128,7 @@ const Landing = () => {
             {[
               { label: "iAqua Aquatics", href: "https://iaquaaquatics.com" },
               { label: "GMG Transportation", href: "https://gmgtransportation.com" },
-              { label: "Fiori Finti Cupcakes", href: "https://fiorifinticupcakes.com" },
+              { label: "Fiori Finti Cupcakes", href: "https://fiori-finti.vercel.app/" },
               { label: "Two Touch ↗", href: "https://twotouchgame.com", badge: "In Development" },
             ].map((item) => (
               <a
