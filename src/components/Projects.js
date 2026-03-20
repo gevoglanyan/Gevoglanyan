@@ -58,7 +58,7 @@ const projects = [
       "Quest dependency visualization",
     ],
     links: [
-      { text: "Website", href: "https://tarkov-quest-tracker.vercel.app/" },
+      { text: "Website", href: "https://tarkov-tracker-six.vercel.app/" },
       { text: "GitHub", href: "https://github.com/gevoglanyan/TarkovTracker" },
     ],
   },

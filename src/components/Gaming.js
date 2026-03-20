@@ -30,7 +30,14 @@ const Gaming = () => {
             <div className="space-y-4 text-white/90 text-base leading-relaxed font-light max-w-lg mb-12">
               <p>
                 I don't play a lot of different games. Just one consistently:{" "}
-                <span className="text-cyan-400 font-bold">Destiny 2</span>.
+                <a
+                  href="https://www.bungie.net/7/en/Destiny"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-400 font-bold hover:underline"
+                >
+                  Destiny 2
+                </a>.
               </p>
 
               <p>
@@ -41,14 +48,29 @@ const Gaming = () => {
 
               <p>
                 Okay, I lied. I also play{" "}
-                <span className="text-red-500 font-bold">Call of Duty</span> from time to time.
+                <a
+                  href="https://www.callofduty.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-500 font-bold hover:underline"
+                >
+                  Call of Duty
+                </a>{" "}
+                from time to time.
               </p>
 
               <br />
 
               <p>
                 Oh, and also this new game{" "}
-                <span className="text-green-500 font-bold">Marathon</span>.
+                <a
+                  href="https://www.marathonthegame.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 font-bold hover:underline"
+                >
+                  Marathon
+                </a>.
               </p>
             </div>
 
@@ -120,11 +142,10 @@ const Gaming = () => {
           </div>
         </div>
 
-        <br /> <br />
-
         <div className="mt-20 border-t border-white/[0.06] pt-8">
+        <br />
           <p className="text-white/90 text-xs tracking-[0.2em] uppercase">
-            More gaming accolades will be added. Or not - Check back.
+            More gaming accolades coming soon - Check back.
           </p>
         </div>
       </div>
