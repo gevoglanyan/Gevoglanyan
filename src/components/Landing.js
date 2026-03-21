@@ -119,13 +119,13 @@ const Landing = () => {
 
         <div className="border-t border-white/90 pt-8">
       
-          <br /> 
+          <br /> <br /> 
 
           <p className="text-white/90 text-xs tracking-[0.2em] uppercase mb-5">
             Selected Work
           </p>
 
-          <br /> 
+          <br /> <br /> 
           
           <div className="flex flex-wrap gap-6 items-center">
             {[

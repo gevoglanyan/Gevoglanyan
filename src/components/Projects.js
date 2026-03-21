@@ -290,7 +290,7 @@ const Projects = () => {
         <br /> 
         
         <p className="text-white/90 text-xs tracking-[0.2em] uppercase mt-12">
-          More projects coming soon — check back.
+          More projects coming soon.
         </p>
       </div>
 
