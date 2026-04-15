@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const clientProjects = [
   {
-    name: "GMG Transportation",
+    name: "GMG Transportation, Inc",
     index: "01",
     tag: "Luxury Booking Platform",
     description:
@@ -50,8 +50,35 @@ const clientProjects = [
     link: { text: "Visit Store", href: "https://fiori-finti.vercel.app/" },
   },
   {
-    name: "Techmetrica",
+    name: "TCPFast",
     index: "04",
+    tag: "Permit Filing Service",
+    description:
+      "A conversion-optimized landing site for a California TCP permit filing service, guiding transportation operators through the full CPUC application process across four state agencies.",
+    tools: ["React", "Tailwind CSS", "Framer Motion", "React Router"],
+    features: [
+      "Multi-page routing with scroll-to-top on navigation",
+      "Animated hero with live stat cards",
+      "Infinite marquee ticker",
+      "Scroll-triggered section reveals",
+      "Mobile-responsive with collapsible nav",
+      "Contact form with loading and success states",
+      "FAQ accordion with smooth AnimatePresence transitions",
+    ],
+    services: [
+      "Standard TCP Permit",
+      "Class A Certificate",
+      "TCP Renewal & Transfer",
+      "Quarterly & Yearly Filing",
+      "Corporation Formation",
+      "EIN Number",
+      "City & Airport Permits",
+    ],
+    link: { text: "View Site", href: "https://tcp-three-omega.vercel.app/" },
+  },
+  {
+    name: "Techmetrica",
+    index: "05",
     tag: "Research Platform",
     description:
       "A psychology-driven web platform exploring decision-making and personality through interactive games, with full admin analytics.",

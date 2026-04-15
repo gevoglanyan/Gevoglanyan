@@ -130,8 +130,9 @@ const Landing = () => {
           <div className="flex flex-wrap gap-6 items-center">
             {[
               { label: "iAqua Aquatics", href: "https://iaquaaquatics.com" },
-              { label: "GMG Transportation", href: "https://gmgtransportation.com" },
+              { label: "GMG Transportation, Inc", href: "https://gmgtransportation.com" },
               { label: "Fiori Finti Cupcakes", href: "https://fiori-finti.vercel.app/" },
+              { label: "TCPFast", href: "https://tcp-three-omega.vercel.app/" },
               { label: "Two Touch ↗", href: "https://twotouchgame.com", badge: "In Development" },
             ].map((item) => (
               <a
