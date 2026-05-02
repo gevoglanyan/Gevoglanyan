@@ -129,6 +129,7 @@ const Landing = () => {
           
           <div className="flex flex-wrap gap-6 items-center">
             {[
+              { label: "Crystal Auto Leasing", href: "https://broker-pearl.vercel.app/" },
               { label: "iAqua Aquatics", href: "https://iaquaaquatics.com" },
               { label: "GMG Transportation, Inc", href: "https://gmgtransportation.com" },
               { label: "Fiori Finti Cupcakes", href: "https://fiori-finti.vercel.app/" },

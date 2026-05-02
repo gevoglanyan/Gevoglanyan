@@ -2,8 +2,25 @@ import React, { useState } from "react";
 
 const clientProjects = [
   {
-    name: "GMG Transportation, Inc",
+    name: "Crystal Auto Leasing",
     index: "01",
+    tag: "Luxury Auto Brokerage",
+    description:
+      "A auto leasing platform built for a family-owned luxury broker in Los Angeles, offering a seamless experience for browsing inventory, submitting credit applications, and connecting with lease advisors.",
+    tools: ["React", "Vite", "Supabase", "CryptoJS", "Vercel"],
+    features: [
+      "Live inventory management with image uploads and drag-to-reorder",
+      "AES-encrypted credit applications with electronic signature and consent",
+      "Supabase database with Row Level Security for protected customer data",
+      "Black and gold premium design with full mobile responsiveness",
+      "Admin dashboard with client management, contact submissions, and inventory control",
+      "Google Maps embed, brand showcase, and real-time featured lease listings",
+    ],
+    link: { text: "Visit Website", href: "https://broker-pearl.vercel.app/" },
+  },
+  {
+    name: "GMG Transportation, Inc",
+    index: "02",
     tag: "Luxury Booking Platform",
     description:
       "A luxury vehicle booking platform built for a private transportation company, offering a seamless booking experience with real-time routing and pricing.",
@@ -19,7 +36,7 @@ const clientProjects = [
   },
   {
     name: "iAqua Aquatics",
-    index: "02",
+    index: "03",
     tag: "E-Commerce Store",
     description:
       "An online store designed for aquarium enthusiasts, featuring a clean, modern shopping experience with PayPal integration.",
@@ -35,7 +52,7 @@ const clientProjects = [
   },
   {
     name: "Fiori Finti Cupcakes",
-    index: "03",
+    index: "04",
     tag: "E-Commerce Store",
     description:
       "An elegant e-commerce platform for premium artificial flowers and floral arrangements with Stripe payment processing.",
@@ -51,7 +68,7 @@ const clientProjects = [
   },
   {
     name: "TCPFast",
-    index: "04",
+    index: "05",
     tag: "Permit Filing Service",
     description:
       "A conversion-optimized landing site for a California TCP permit filing service, guiding transportation operators through the full CPUC application process across four state agencies.",
@@ -78,7 +95,7 @@ const clientProjects = [
   },
   {
     name: "Techmetrica",
-    index: "05",
+    index: "06",
     tag: "Research Platform",
     description:
       "A psychology-driven web platform exploring decision-making and personality through interactive games, with full admin analytics.",
